@@ -1,0 +1,7 @@
+.container {
+  width: 900px;
+  background: blue;
+  &.orange {
+    background: orange;
+  }
+}

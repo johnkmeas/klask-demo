@@ -1,0 +1,45 @@
+<style>
+  {{ settings.header_font | font_face }}
+  {{ settings.body_font | font_face }}
+  {%- assign font_body_bold = settings.body_font | font_modify: 'weight', 'bolder' -%}
+  {%- assign font_body_bold_italic = font_body_bold | font_modify: 'style', 'italic' -%}
+  {{ font_body_bold | font_face }}
+  {{ font_body_bold_italic | font_face }}
+  :root {
+    --color-heading-text: {{ settings.color_heading_text }};
+    --color-body-text: {{ settings.color_body_text }};
+    --color-header_nav-text: {{ settings.color_header_nav_text }};
+    --color-footer_nav-text: {{ settings.color_footer_nav_text }};
+    --color-topper-text: {{ settings.color_topper_text }};
+    --color-light-text: {{ settings.color_light_text }};
+    --color-accent-text: {{ settings.color_accent }};
+
+    --color-button: {{ settings.color_button_primary }};
+    --color-button-text: {{ settings.color_button_text_primary }};
+    --color-button-alt: {{ settings.color_button_alt }};
+    --color-button-text-alt: {{ settings.color_button_text_alt }};
+    --font-body-weight: {{ settings.button_weight }};
+
+
+    --color-text-field-text: {{ settings.color_text_field_text }};
+    --color-text-field-border: {{ settings.color_text_field_border }};
+
+    --color-main-background: {{ settings.color_bg_main }};
+    --color-body-bg-alt: {{ settings.color_body_bg_alt }};
+    --color-body-bg-dark: {{ settings.color_body_bg_dark }};
+    --color-body_borders: {{ settings.color_body_borders }};
+
+    --font-heading: {{ settings.header_font.family }}, {{ settings.header_font.fallback_families }};
+    --font-heading-weight: {{ settings.header_font.weight  }};
+    --font-heading-h1-size: {{ settings.header_font_size_h1 }};
+    --font-heading-h2-size: {{ settings.header_font_size_h2 }};
+    --font-heading-h3-size: {{ settings.header_font_size_h3 }};
+    --font-heading-h4-size: {{ settings.header_font_size_h4 }};
+
+    --font-body: {{ settings.body_font.family }}, {{ settings.body_font.fallback_families }};
+    --font-body-weight: {{ settings.body_font.weight }};
+    --font-body-size: {{ settings.body_font_size }};
+    --font-footer-size: {{ settings.footer_font_size }};
+    --font-link-size: {{ settings.link_font_size }};
+  }
+</style>
