@@ -1,24 +1,23 @@
 <footer>
-  <nav>
-    {% assign menu = linklists.footer %}
-    {{ menu.title }}: {{ menu.levels }}
-
-    {{ linklists..footer.title }}
-
-    {% for link in linklists..footer.links %}
-      {{ link.title }}: child_active: {{ link.child_active }}
-      {% for sub_link in link.links %}
-        {{ sub_link.title }}: child_active: {{ sub_link.child_active }}
-        {% for sub_sub_link in sub_link.links %}
-          {{ sub_sub_link.title }}: active: {{ sub_sub_link.active }}
+  <nav class="kl-bg-alt py-12">
+    <div class="container px-4 sm:px-0 sm:mx-auto ">
+      <div class="grid grid-cols-2 sm:grid-cols-4 sm:gap-4">
+        {% for link in linklists.footer.links %}
+          <ul>
+            <!-- {{ link.title }}: child_active: {{ link.child_active }} -->
+            <li>
+              <a href="{{ link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
+            </li>
+            {% for sub_link in link.links %}
+              <li>
+                <a href="{{ sub_link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-footer-nav">{{ sub_link.title }}</a>
+              </li>
+  
+            {% endfor %}
+          </ul>
         {% endfor %}
-      {% endfor %}
-    {% endfor %}
-
-    <!-- {% for link in linklists.main-menu.links %}
-      <a href="{{ link.url }}">{{ link.title }}</a>
-
-      
-    {% endfor %} -->
+      </div>
+    </div>
   </nav>
+  <div class="py-6 kl-font-footer-size kl-color-footer-nav flex flex-row flex-wrap justify-center content-center items-center">Copyright &copy; 2020 Klask All Rights Reserved</div>
 </footer>
