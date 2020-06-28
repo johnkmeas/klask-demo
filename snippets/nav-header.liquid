@@ -1,15 +1,18 @@
 <header>
-  <div class="kl-bg-blue h-10 flex flex-col items-center content-center">
-    <span class="inline-block align-middle kl-color-yellow">
-      sdafdf
-
-    </span>
+  <div class="kl-bg-blue">
+    <div class="container mx-auto ">
+      <div class="h-10 flex flex-row flex-wrap justify-center content-center items-center">
+        <span class="inline-block align-middle kl-color-yellow">
+          FREE SHIPPING ON ALL ORDERS
+        </span>
+      </div>
+    </div>
   </div>
   <nav class="container mx-auto">
     <ul class="flex flex-row flex-wrap justify-between content-center kl-nav-height">
       {% for link in linklists..main-menu.links %}
       <li>
-        <a href="{{ link.url }}">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
       </li>
       {% endfor %}
     </ul>
