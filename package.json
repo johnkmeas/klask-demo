@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"theme watch --env=dev\" \"gulp watch\"",
     "open": "theme open --env=dev",
     "dev": "theme watch --env=dev",
     "deploy_dev": "theme deploy --env=dev",
@@ -14,10 +15,12 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.4",
+    "concurrently": "^5.2.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "postcss-partial-import": "^4.1.0",
+    "postcss-scss": "^2.1.1",
     "tailwindcss": "^1.4.6"
   }
 }

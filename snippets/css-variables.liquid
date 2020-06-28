@@ -8,8 +8,8 @@
   :root {
     --color-heading-text: {{ settings.color_heading_text }};
     --color-body-text: {{ settings.color_body_text }};
-    --color-header_nav-text: {{ settings.color_header_nav_text }};
-    --color-footer_nav-text: {{ settings.color_footer_nav_text }};
+    --color-header-nav-text: {{ settings.color_header_nav_text }};
+    --color-footer-nav-text: {{ settings.color_footer_nav_text }};
     --color-topper-text: {{ settings.color_topper_text }};
     --color-light-text: {{ settings.color_light_text }};
     --color-accent-text: {{ settings.color_accent }};
@@ -18,7 +18,7 @@
     --color-button-text: {{ settings.color_button_text_primary }};
     --color-button-alt: {{ settings.color_button_alt }};
     --color-button-text-alt: {{ settings.color_button_text_alt }};
-    --font-body-weight: {{ settings.button_weight }};
+    --font-button-weight: {{ settings.button_weight }};
 
 
     --color-text-field-text: {{ settings.color_text_field_text }};
@@ -43,3 +43,8 @@
     --font-link-size: {{ settings.link_font_size }};
   }
 </style>
+
+
+{% render 'css-font' %}
+{% render 'css-background' %}
+{% render 'css-button' %}
