@@ -1,0 +1,36 @@
+{% if screen == 'mobile' %}
+  <div class="grid grid-cols-1 gap-6 p-4 kl-bg-alt kl-card-rounded">
+    <div class="col-span-1 text-center">
+      <div class="kl-thumbnail-video kl-thumbnail-video-{{index}}" >
+      </div>
+      <p class="kl-font-header kl-font-header-weight kl-font-body-video-size kl-color-heading ">
+        {{ text }}
+      </p>
+    </div>
+  </div>
+{% else %}
+  <div class="grid grid-cols-5 gap-6 p-10 kl-bg-alt kl-card-rounded items-center">
+    <div class="sm:order-last kl-thumbnail-video kl-thumbnail-video-{{index}}" >
+    </div>
+    <p class="col-span-3 kl-font-header kl-font-header-weight kl-font-body-video-size kl-color-heading ">
+      {{ text }}
+    </p>
+  </div>
+{% endif %}
+<style>
+
+  
+  .kl-thumbnail-video-{{index}}::before {
+    background: url({{ image.src | img_url: 'x246' }}) no-repeat;
+  }
+
+  /* .kl-icon-volt::after {
+    content: "";
+    background: url({{ 'icon-volt.svg' | asset_url }}) no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: scaleX(-1);
+  }
+  <img class="rounded-full" src="{{ image.src | img_url: 'x246' }} " alt=""> */
+</style>

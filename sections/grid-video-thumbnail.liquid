@@ -1,0 +1,93 @@
+<section>
+  <!-- desktop -->
+  <div class="container px-4 md:px-0 sm:mx-auto">
+    <div class="hidden sm:block">
+      <div class="grid grid-cols-2 gap-5">
+        {% for block in section.blocks %}
+        {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index %}
+        {% endfor %}
+      </div>
+    </div>
+    <!-- mobile -->
+    <div class="sm:hidden block">
+      <div class="grid grid-cols-2 gap-3">
+        {% for block in section.blocks %}
+        {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index, screen: 'mobile' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .kl-thumbnail-video {
+    width: 320px;
+    height: 125px;
+  }
+  .kl-thumbnail-video::before {
+    content: "";
+    display: inline-block;
+    width: 246px;
+    height: 246px;
+    margin-top: -3.75rem;
+    margin-left: -1.5rem;
+    position: absolute;
+  }
+
+  @media (max-width: 640px) {
+    .kl-thumbnail-video {
+      width: inherit;
+      height: 60.15px;
+    }
+
+    .kl-thumbnail-video::before {
+      content: "";
+      display: inline-block;
+      width: 123px;
+      height: 123px;
+      margin-top: -5rem;
+      margin-left: 0;
+      position: relative;
+      background-size: contain;
+    }
+  }
+</style>
+{% schema %}
+  {
+    "name": "Video thumbnails",
+    "settings": [
+      {
+        "type": "header",
+        "content": "video Thumbnail"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add Video Thumbnail",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_thumbnail",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "heading_thumbnail",
+            "label": "heading"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Video thumbnails",
+        "category": "Grid"
+      }
+    ]
+  }
+{% endschema %}
