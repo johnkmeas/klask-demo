@@ -1,26 +1,42 @@
 <header>
+  <!-- Topper -->
   <div class="kl-bg-blue">
     <div class="container px-4 md:px-0 sm:mx-auto">
       <div class="h-10 flex flex-row flex-wrap justify-center content-center items-center">
-        <span class="inline-block align-middle kl-color-yellow">
+        <span class="kl-font-header kl-color-yellow inline-block align-middle font-black kl-topper-letter-spacing">
           FREE SHIPPING ON ALL ORDERS
         </span>
-        <div class="flex flex-row justify-end">
-          <span class="kl-font-footer-size kl-font-body kl-font-body-weight kl-color-light" >United States</span>
+        <div class="hidden sm:block flex flex-row justify-end">
+          <span class="kl-font-footer-size kl-font-body bold  kl-color-light" >United States</span>
         </div>
       </div>
     </div>
   </div>
-  <nav class="js-nav container z-50 px-4 sm:px-0 sm:mx-auto fixed sm:relative kl-bg-white top-0">
-    <div class="flex flex-col justify-between h-screen py-20 sm:py-0 sm:h-20 sm:h-20">
-      <ul class="flex flex-col items-center sm:item-start sm:flex-row sm:flex-wrap sm:justify-between sm:content-center h-full">
+  <!-- mobile navbar header-->
+  <div class="block sm:hidden container px-4 md:px-0 sm:mx-auto">
+    <div class="flex flex-row justify-between items-center py-1">
+      <span class="js-open-mobile-nav cursor-pointer p-3 block">
+        {% render 'icon-hamburger-svg' %}
+      </span>
+      <span class="cursor-pointer p-3 block">
+        {% render 'logo-klask-svg' %}
+      </span>
+      <span class="cursor-pointer p-3 block">
+        {% render 'icon-cart-svg' %}
+      </span>
+    </div>
+  </div>
+  <!-- Desktop navbar and mobile offcanvas nav -->
+  <nav class="kl-main-nav sm:block js-nav container z-50 px-4 sm:px-0 sm:mx-auto fixed sm:relative kl-bg-white top-0">
+    <div class="flex flex-col justify-between h-screen py-24 sm:py-0 sm:h-20 sm:h-20">
+      <ul class="flex flex-col item-start sm:flex-row sm:flex-wrap sm:justify-between sm:content-center h-full px-12 sm:px-0">
         {% for link in linklists.main-menu.links %}
         <li>
-          <a href="{{ link.url }}" class="block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav text-center sm:text-left">{{ link.title }}</a>
+          <a href="{{ link.url }}" class="block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
         </li>
         {% endfor %}
       </ul>
-      <button class="js-close-mobile-nav sm:hidden">close</button>
+      <button class="js-close-mobile-nav sm:hidden kl-font-body kl-font-body-size kl-font-body kl-color-blue">close</button>
     </div>
 
     <!-- {% for link in linklists.main-menu.links %}
@@ -30,9 +46,34 @@
     {% endfor %} -->
   </nav>
 </header>
+<style>
+  @media (max-width: 640px) {
+    .kl-main-nav,
+    .kl-main-nav.hidden {
+      transform: translateX(640px);
+      transition: transform 300ms ease-in-out;
 
+    }
+
+    .kl-main-nav.block {
+      transform: translateX(0);
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
+  .kl-topper-letter-spacing {
+    letter-spacing: 3px;
+  }
+
+</style>
 <script>
   document.querySelector('.js-close-mobile-nav').addEventListener('click', function() {
     document.querySelector('.js-nav').classList.add("hidden");
+    document.querySelector('.js-nav').classList.remove("block");
+  })
+
+  document.querySelector('.js-open-mobile-nav').addEventListener('click', function() {
+    document.querySelector('.js-nav').classList.add("block");
+    document.querySelector('.js-nav').classList.remove("hidden");
   })
 </script>
