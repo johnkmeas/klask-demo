@@ -1,5 +1,13 @@
-<a href="{{ url }}" class="kl-bg-button-alt kl-button-xp kl-button-height kl-button-rounded">
-  <span class="kl-font-header kl-color-blue flex flex-col justify-center h-full text-center kl-font-button-weight">
+{% if color == 'yellow' %}
+  {% assign bg = 'kl-bg-button-alt' %}
+  {% assign text_color =  'kl-color-button-alt' %}
+{% elsif color == 'blue' %}
+  {% assign bg = 'kl-bg-button' %}
+  {% assign text_color = 'kl-color-button' %}
+{% endif %}
+
+<a href="{{ url }}" class="{{ bg }} kl-button-xp kl-button-height kl-button-rounded">
+  <span class="kl-font-header {{ text_color }} flex flex-col justify-center h-full text-center kl-font-button-weight">
     {{ text }}
   </span>
 </a>

@@ -3,7 +3,7 @@
     <span class="kl-font-header hk-font-hero-size kl-color-light font-light text-center">
       {{ section.settings.hero_text }}
     </span>
-    {% render 'button' with text: section.settings.button_text, url: section.settings.button_url %}
+    {% render 'button' with text: section.settings.button_text, url: section.settings.button_url, color: 'yellow' %}
   </div>
 </section>
 <section class="sm:hidden kl-hero-height kl-bg-alt bg-cover bg-center" style="background-image: url({{ section.settings.hero_image_mobile.src | img_url: 'master' }})">
@@ -11,7 +11,7 @@
     <span class="kl-font-header kl-h1 kl-color-light kl-font-header-weight text-center">
       {{ section.settings.hero_text }}
     </span>
-    {% render 'button' with text: section.settings.button_text, url: section.settings.button_url %}
+    {% render 'button' with text: section.settings.button_text, url: section.settings.button_url, color: 'yellow' %}
   </div>
 </section>
 <style>
