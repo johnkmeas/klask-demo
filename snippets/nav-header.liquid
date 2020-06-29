@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <nav class="container px-4 sm:px-0 sm:mx-auto absolute sm:relative kl-bg-white top-0">
+  <nav class="js-nav container px-4 sm:px-0 sm:mx-auto absolute sm:relative kl-bg-white top-0">
     <div class="flex flex-col justify-between h-screen py-20 sm:py-0 sm:h-20 sm:h-20">
       <ul class="flex flex-col items-center sm:item-start sm:flex-row sm:flex-wrap sm:justify-between sm:content-center h-full">
         {% for link in linklists.main-menu.links %}
@@ -20,7 +20,7 @@
         </li>
         {% endfor %}
       </ul>
-      <button class="sm:hidden">close</button>
+      <button class="js-close-mobile-nav sm:hidden">close</button>
     </div>
 
     <!-- {% for link in linklists.main-menu.links %}
@@ -30,3 +30,9 @@
     {% endfor %} -->
   </nav>
 </header>
+
+<script>
+  document.querySelector('.js-close-mobile-nav').addEventListener('click', function() {
+    document.querySelector('.js-nav').classList.add("hidden");
+  })
+</script>
