@@ -47,6 +47,18 @@
     font-size: var(--font-body-size);
   }
 
+  .kl-font-body-medium-size {
+    font-size: var(--font-heading-h4-size);
+  }
+
+  .kl-font-body-large-size {
+    font-size: var(--font-heading-h3-size);
+  }
+
+  .kl-font-body-product-size {
+    font-size: 22px;
+  }
+
   .kl-font-header {
     font-family: var(--font-heading);
   }
@@ -92,9 +104,21 @@
     .kl-font-header-mobile-link-size {
       font-size: 48px;
     }
+    .kl-font-body-large-size,
+    .kl-font-body-product-size {
+      font-size: var(--font-heading-h4-size);
+    }
+    
+    .kl-font-body-medium-size {
+      font-size: var(--font-body-size);
+    }
   }
-  @media (max-width: 640px) {
 
+  @media (max-width: 640px) {
+    .kl-h1 {
+      font-size: 32px;
+    }
   }
+
 
 </style>

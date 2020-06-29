@@ -1,0 +1,25 @@
+{% if size == 'body' %}
+  {% assign text_size = 'kl-font-body-size' %}
+
+{% elsif size == 'medium' %}
+  {% assign text_size = 'kl-font-body-medium-size' %}
+
+{% elsif size == 'product' %}
+  {% assign text_size = 'kl-font-body-product-size' %}
+
+{% elsif size == 'large' %}
+  {% assign text_size = 'kl-font-body-large-size' %}
+
+{% endif %}
+
+{% if align == 'center' %}
+  {% assign text_align = 'text-center' %}
+
+{% else %}
+{% assign text_align = '' %}
+{% endif %}
+
+<!-- {{ text_size }} -->
+<p class="kl-font-body {{ text_size }} {{ text_align }} kl-color-body mb-6">
+ {{ text }}
+</p>

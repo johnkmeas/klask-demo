@@ -2,7 +2,11 @@
 {% section 'hero' %}
 <section>
   <div class="container mx-auto">
-    <h1>Kitchen sink</h1>
+    {% render 'text-heading' with h_type: 'h1', text: 'WHAT IS KLASK', icon: 'volt' %}
+    {% render 'text-paragraph' with size: 'large', align: 'center', text: 'A popular pub game in Denmark, Klask is like a fast-paced table-top version of Air Hockey, only it uses multiple magnets and a small round ball. Players must use the magnetic handles under the board to control their playing pieces on top of the board.' %}
+    {% render 'text-paragraph' with size: 'body', align: 'center', text: 'Klask is like a fast-paced table-top version of Air Hockey,' %}
+    {% render 'text-paragraph' with size: 'product', align: 'center', text: 'Klask is like a fast-paced table-top version of Air Hockey,' %}
+    {% render 'text-paragraph' with size: 'medium', align: 'center', text: 'Klask is like a fast-paced table-top version of Air Hockey,' %}
   </div>
 </section>
 

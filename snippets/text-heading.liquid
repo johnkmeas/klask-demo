@@ -1,0 +1,9 @@
+{% if icon == 'volt' %}
+  {% assign icon_accent = 'kl-icon kl-icon-volt' %}
+{% else %}
+  {% assign icon_accent = '' %}
+{% endif %}
+
+<h1 class="kl-font-header kl-h1 kl-color-heading kl-font-header-weight text-center {{ icon_accent }}">
+  {{ text }}
+</h1>
