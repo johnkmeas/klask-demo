@@ -17,3 +17,46 @@
 .kl-card-rounded {
   border-radius: 10px;
 }
+
+.kl-border {
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-body_borders);
+}
+
+button.slick-arrow {
+  &.slick-next,
+  &.slick-prev {
+    display: none !important;
+  }
+}
+
+.kl-product-button-group {
+
+}
+
+.kl-button-height {
+  height: 64px;
+}
+
+.kl-button-xp {
+  padding: 0 34px;
+}
+
+.kl-button-rounded {
+  border-radius: 5px;
+}
+
+.kl-button-border-side {
+  &:first-child {
+    border-right: 1px solid var(--color-heading-text);
+  }
+  &:nth-child(2) {
+    border-left: 1px solid var(--color-heading-text);
+  }
+
+  &:hover,
+  &.active {
+    background-color: var(--color-topper-text);
+  }
+}

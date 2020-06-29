@@ -1,0 +1,56 @@
+<section>
+  <!-- desktop -->
+  <div class="container px-4 md:px-0 sm:mx-auto">
+    <div class="hidden sm:block">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 ">
+        {% for block in section.blocks %}
+        {% render 'card-product' with text: block.settings.excerpt, product: block.settings.product %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="sm:hidden">
+      <div class="slick-products">
+        {% for block in section.blocks %}
+        <span>
+          
+        </span>{{ all_products[block.settings.product].title }}
+        {% endfor %}
+      </div>
+      <div class="js-product-next">arrow</div>
+      <div class="slick-products">
+        {% for block in section.blocks %}
+        {% render 'card-product' with text: block.settings.excerpt, product: block.settings.product %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+  $(document).ready(function() {
+    $('.slick-products').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.js-product-prev'),
+      nextArrow: $('.js-product-next'),
+    });
+  });
+
+
+  $('.slick-products').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slick-products-nav'
+});
+$('.slick-products-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slick-products',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+	
