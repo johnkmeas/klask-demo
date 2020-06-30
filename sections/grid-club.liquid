@@ -1,0 +1,86 @@
+<section class="py-10 pb-16 sm:py-20">
+  <div class="container px-4 sm:mx-auto">
+    <div class="pb-6">
+      {% render 'text-heading' with h_type: 'h2', text: section.settings.heading, icon: 'volt' %}
+    </div>
+    <!-- Mobile -->
+    <ul class="block sm:hidden grid grid-cols-2 gap-4">
+      {% for block in section.blocks %}
+        <li class="">
+          <img src="{{ block.settings.club_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.club_thumbnail.alt }}" class="script">
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- Desktop -->
+  <ul class="hidden sm:block slick-club">
+    {% for block in section.blocks %}
+      <li class="">
+        <img src="{{ block.settings.club_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.club_thumbnail.alt }}" class="script">
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+  {
+    "name": "Club Thumbnails",
+    "settings": [
+      {
+        "type": "header",
+        "content": "clubs"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add ClubThumbnail",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "club_thumbnail",
+            "label": "Club Award"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Club Thumbnails",
+        "category": "Grid"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+  $(document).ready(function() {
+
+    $('.slick-club').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      initialSlide: 1,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 5,
+            dots: false
+          }
+        }
+      ]
+    })
+  });
+});
+</script>

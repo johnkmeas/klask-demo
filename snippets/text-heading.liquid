@@ -4,6 +4,13 @@
   {% assign icon_accent = '' %}
 {% endif %}
 
-<h1 class="kl-font-header kl-h1 kl-color-heading kl-font-header-weight text-center {{ icon_accent }}">
+{% if h_type == 'h1' %}
+  {% assign h_type = 'h1' %}
+{% else %}
+  {% assign h_type = 'h2' %}
+{% endif %}
+
+
+<{{ h_type }} class="kl-font-header kl-h1 kl-color-heading kl-font-header-weight text-center {{ icon_accent }}">
   {{ text }}
-</h1>
+</{{ h_type }}>
