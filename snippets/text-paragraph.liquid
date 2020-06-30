@@ -19,7 +19,7 @@
 {% if color == 'light' %}
   {% assign text_color = 'kl-color-light' %}
 {% else %}
-  {% assign text_color = '' %}
+  {% assign text_color = 'kl-color-body' %}
 {% endif %}
 
 {% if padding == 'none' %}
@@ -29,6 +29,6 @@
 {% endif %}
 
 <!-- {{ text_size }} -->
-<p class="kl-font-body {{ text_color }} {{ text_padding }} {{ text_size }} {{ text_align }} kl-color-bodys">
+<p class="kl-font-body {{ text_color }} {{ text_padding }} {{ text_size }} {{ text_align }}">
  {{ text }}
 </p>

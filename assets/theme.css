@@ -9,8 +9,19 @@
   border-style: solid;
   border-color: var(--color-body_borders); }
 
+.slick-slide {
+  margin: 0 5px; }
+
 button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
   display: none !important; }
+
+.slick-dots {
+  margin-bottom: -30px; }
+  .slick-dots li {
+    margin: 0 2px; }
+    .slick-dots li button:before {
+      color: #ffffff !important;
+      font-size: 16px; }
 
 .kl-button-height {
   height: 64px; }
@@ -29,6 +40,9 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
 
 .kl-button-border-side:hover, .kl-button-border-side.active {
   background-color: var(--color-topper-text); }
+
+.kl-rotate-svg-180 svg {
+  transform: rotate(180deg); }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

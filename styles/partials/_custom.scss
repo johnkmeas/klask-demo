@@ -7,7 +7,6 @@
 // }
 
 .bg-klask-blue {
-
 }
 
 .kl-nav-height {
@@ -24,6 +23,10 @@
   border-color: var(--color-body_borders);
 }
 
+// SLICK SLIDE
+.slick-slide {
+  margin: 0 5px;
+}
 button.slick-arrow {
   &.slick-next,
   &.slick-prev {
@@ -31,8 +34,20 @@ button.slick-arrow {
   }
 }
 
-.kl-product-button-group {
+.slick-dots {
+  margin-bottom: -30px;
 
+  li {
+    margin: 0 2px;
+
+    button:before {
+      color: #ffffff !important;
+      font-size: 16px;
+    }
+  }
+}
+
+.kl-product-button-group {
 }
 
 .kl-button-height {
@@ -58,5 +73,11 @@ button.slick-arrow {
   &:hover,
   &.active {
     background-color: var(--color-topper-text);
+  }
+}
+
+.kl-rotate-svg-180 {
+  svg {
+    transform: rotate(180deg);
   }
 }
