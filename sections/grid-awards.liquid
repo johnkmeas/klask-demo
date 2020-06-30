@@ -1,0 +1,113 @@
+<section class="kl-bg-off-white py-10 pb-16 sm:py-20">
+  <!-- desktop -->
+  <div class="container px-4 sm:mx-auto">
+    <div class="flex flex-col sm:flex-row justify-between pb-8 sm:pb-10">
+      <h3 class="kl-h2 kl-font-header kl-font-header-weight kl-color-heading">
+        <span class="block text-center sm:text-left">
+          {{ section.settings.heading }}
+        </span>
+      </h3>
+    </div>
+
+    {% if section.settings.desktop_slider %}
+      {% assign desktop_slide_class = '' %}
+    {% else %}
+      {% assign desktop_slide_class = 'sm:hidden' %}
+    {% endif %}
+
+    <ul class="block {{ desktop_slide_class }} slick-awards">
+      {% for block in section.blocks %}
+        <li class="">
+          <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="script">
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if section.settings.desktop_slider == false %}
+      <ul class="hidden sm:grid sm:grid-cols-4 sm:col-gap-5 sm:row-gap-3 lg:col-gap-12 lg:row-gap-6">
+        {% for block in section.blocks %}
+          <li class="">
+            <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="script">
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Awards Thumbnails",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Awards"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "desktop_slider",
+        "label": "Slider for Desktop"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add Awards Thumbnail",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "award_thumbnail",
+            "label": "Image Award"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Awards Thumbnails",
+        "category": "Grid"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+  $(document).ready(function() {
+
+    $('.slick-awards').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      initialSlide: 1,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 5,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            unslick: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false
+          }
+        }
+      ]
+    })
+  });
+});
+</script>
