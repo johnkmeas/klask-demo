@@ -83,6 +83,16 @@
   font-size: var(--font-heading-h3-size);
 }
 
+.kl-h3-tutorial {
+  font-size: 30px;
+  font-weight: bold;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    font-weight: var(--font-heading-weight);
+  }
+}
+
 .kl-h4 {
   font-size: var(--font-heading-h4-size);
 }

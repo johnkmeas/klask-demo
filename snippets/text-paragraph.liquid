@@ -7,9 +7,11 @@
   {% assign text_size = 'kl-font-body-product-size' %}
 {% elsif size == 'large' %}
   {% assign text_size = 'kl-font-body-large-size' %}
-  {% elsif size == 'review' %}
+{% elsif size == 'review' %}
   {% assign text_size = 'kl-font-body-review-size' %}
-{% endif %}
+{% elsif size == 'tutorial' %}
+  {% assign text_size = 'kl-h4' %}
+{% endif %} 
 
 {% comment %} Text Align {% endcomment %}
 {% if align == 'center' %}
@@ -20,6 +22,8 @@
 
 {% if color == 'light' %}
   {% assign text_color = 'kl-color-light' %}
+{% elsif color == 'kl-color-body-blue' %}
+  {% assign text_color = 'kl-color-body-blue' %}
 {% else %}
   {% assign text_color = 'kl-color-body' %}
 {% endif %}

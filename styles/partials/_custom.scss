@@ -54,8 +54,15 @@ button.slick-arrow {
   }
 }
 
+.kl-tutorial-left-rounded {
+  @media (min-width: 641px) {
+    border-radius: 10px 0 0 10px;
+  }
+}
 
-
+.kl-tutorial-right-rounded {
+  border-radius: 0 10px 10px 0;
+}
 
 
 .kl-product-button-group {
