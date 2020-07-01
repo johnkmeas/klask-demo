@@ -14573,6 +14573,12 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
 .kl-font-header-nav-weight {
   font-weight: var(--font-heading-weight); }
 
+.kl-font-shout-out-size {
+  font-size: 108px; }
+
+.kl-font-shout-line-height {
+  line-height: 1em; }
+
 .kl-h1 {
   font-size: var(--font-heading-h1-size); }
 
@@ -14620,7 +14626,8 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
     font-size: var(--font-body-size); } }
 
 @media (max-width: 640px) {
-  .kl-h1 {
+  .kl-h1,
+  .kl-font-shout-out-size {
     font-size: 32px; } }
 
 /* Color */
