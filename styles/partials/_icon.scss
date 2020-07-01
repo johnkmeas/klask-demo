@@ -1,6 +1,6 @@
 .kl-icon {
   &:after {
-    content: '';
+    content: "";
   }
 }
 
@@ -25,7 +25,7 @@
     &:after {
       background-image: linear-gradient(to right, transparent 50%, #0a00a3 50%);
       background-size: 25px 100%;
-      content: '';
+      content: "";
       height: 3px;
       margin-top: 20px;
       position: absolute;
@@ -35,5 +35,11 @@
         margin-left: -10px;
       }
     }
+  }
+}
+
+.kl-icon-mx-auto-child {
+  > * {
+    margin: 0 auto;
   }
 }

@@ -9,3 +9,15 @@
 .kl-button-rounded {
   border-radius: 5px;
 }
+
+.kl-button-submit-rounded {
+  border-radius: 0 5px 5px 0;
+}
+
+.kl-border-submit {
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--color-button);
+  // hacky fix for border gap with grid
+  box-shadow: inset 0px 0px 0px 2px var(--color-button);
+}

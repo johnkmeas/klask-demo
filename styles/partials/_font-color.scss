@@ -10,7 +10,7 @@
 }
 
 .kl-color-body-blue {
-  color: #1B084C;
+  color: #1b084c;
 }
 
 .kl-color-header-nav {
@@ -35,4 +35,8 @@
 
 .kl-color-yellow {
   color: var(--color-topper-text);
+}
+
+.kl-input-placeholder-color::-webkit-input-placeholder {
+  color: var(--color-body-text);
 }
