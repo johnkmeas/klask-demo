@@ -1,17 +1,19 @@
 <section class="kl-bg-blue py-10 pb-16 sm:py-20">
   <!-- desktop -->
   <div class="container px-4 sm:mx-auto">
-    <div class="flex flex-col sm:flex-row justify-between pb-8 sm:pb-10">
-      <h3 class="kl-h2 kl-font-header kl-font-header-weight kl-color-light pb-2">
-        <span class="hidden sm:block">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pb-8 sm:pb-10">
+      <h3 class="col-span-1 md:col-span-2 kl-h2 kl-font-header kl-font-header-weight kl-color-light pb-2">
+        <span class="hidden sm:block sm:pr-10">
           {{ section.settings.heading }}
         </span>
         <span class="block sm:hidden text-center">
           {{ section.settings.heading_mobile }}
         </span>
       </h3>
-      <div class="w-full sm:w-4/12">
-        {% render 'icon-social-proof-svg' %}
+      <div class="col-span-1">
+        <span class="kl-icon-mx-auto-child">
+          {% render 'icon-social-proof-svg' %}
+        </span>
       </div>
     </div>
   </div>
