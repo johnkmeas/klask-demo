@@ -23,6 +23,10 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
       color: #ffffff !important;
       font-size: 16px; }
 
+.slick-review-nav .slick-track {
+  display: flex;
+  align-items: center; }
+
 .kl-button-height {
   height: 64px; }
 
@@ -43,6 +47,24 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
 
 .kl-rotate-svg-180 svg {
   transform: rotate(180deg); }
+
+.kl-icon:after {
+  content: ''; }
+
+.slick-review-nav .slick-track {
+  padding-bottom: 25px; }
+
+.slick-review-nav .slick-current:after {
+  background-image: linear-gradient(to right, transparent 50%, #0a00a3 50%);
+  background-size: 25px 100%;
+  content: '';
+  height: 3px;
+  margin-top: 20px;
+  position: absolute;
+  width: inherit; }
+  @media (min-width: 641px) {
+    .slick-review-nav .slick-current:after {
+      margin-left: -10px; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -14477,6 +14499,138 @@ video {
 
 .delay-1000 {
   transition-delay: 1000ms; }
+
+/* 
+    --color-heading-text: #0a00a3;
+    --color-body-text: #333232;
+    --color-header-nav-text: #0a00a3;
+    --color-footer-nav-text: #323232;
+    --color-topper-text: #ffd40e;
+    --color-light-text: #ffffff;
+    --color-accent-text: ;
+    --color-button: #0a00a3;
+    --color-button-text: #ffffff;
+    --color-button-alt: #ffd40e;
+    --color-button-text-alt: #0a00a3;
+    --font-button-weight: bold;
+    --color-text-field-text: #0a00a3;
+    --color-text-field-border: #0a00a3;
+    --color-main-background: #ffffff;
+    --color-body-bg-alt: #f4f3ff;
+    --color-body-bg-dark: #0a00a3;
+    --color-body_borders: #f4f3ff;
+    --font-heading: Dosis, sans-serif;
+    --font-heading-weight: 600;
+    --font-heading-h1-size: 48px;
+    --font-heading-h2-size: 32px;
+    --font-heading-h3-size: 26px;
+    --font-heading-h4-size: 20px;
+    --font-body: Dosis, sans-serif;
+    --font-body-weight: 500;
+    --font-body-size: 18px;
+    --font-footer-size: 14px;
+    --font-link-size: 20px;
+
+*/
+.kl-font-body {
+  font-family: var(--font-body); }
+
+.kl-font-body-weight {
+  font-weight: var(--font-body-weight); }
+
+.kl-font-body-size {
+  font-size: var(--font-body-size); }
+
+.kl-font-body-medium-size {
+  font-size: var(--font-heading-h4-size); }
+
+.kl-font-body-large-size {
+  font-size: var(--font-heading-h3-size); }
+
+.kl-font-body-review-size {
+  font-size: var(--font-heading-h3-size); }
+
+.kl-font-body-product-size {
+  font-size: 22px; }
+
+.kl-font-body-video-size {
+  font-size: var(--font-heading-h2-size); }
+
+.kl-font-header {
+  font-family: var(--font-heading); }
+
+.kl-font-header-weight,
+.kl-font-header-nav-weight {
+  font-weight: var(--font-heading-weight); }
+
+.kl-h1 {
+  font-size: var(--font-heading-h1-size); }
+
+.kl-h2 {
+  font-size: var(--font-heading-h2-size); }
+
+.kl-h3 {
+  font-size: var(--font-heading-h3-size); }
+
+.kl-h4 {
+  font-size: var(--font-heading-h4-size); }
+
+.hk-font-hero-size {
+  font-size: 108px; }
+
+.k1-font-header-product-size {
+  font-size: var(--font-heading-h2-size); }
+
+.kl-font-footer-size {
+  font-size: var(--font-footer-size); }
+
+.kl-font-link-size {
+  font-size: var(--font-link-size); }
+
+.kl-font-link-size {
+  font-size: var(--font-link-size); }
+
+@media (max-width: 640px) {
+  .kl-font-header-mobile-link-size {
+    font-size: 48px; }
+  .kl-font-body-large-size,
+  .kl-font-body-product-size,
+  .kl-font-body-video-size,
+  .k1-font-header-product-size {
+    font-size: var(--font-heading-h4-size); }
+  .kl-font-body-medium-size {
+    font-size: var(--font-body-size); } }
+
+@media (max-width: 640px) {
+  .kl-h1 {
+    font-size: 32px; } }
+
+/* Color */
+.kl-color-blue,
+.kl-color-heading {
+  color: var(--color-heading-text); }
+
+.kl-color-dark,
+.kl-color-body {
+  color: var(--color-body-text); }
+
+.kl-color-header-nav {
+  color: var(--color-header-nav-text); }
+
+.kl-color-footer-nav {
+  color: var(--color-footer-nav-text); }
+
+.kl-color-topper {
+  color: var(--color-topper-text); }
+
+.kl-color-light {
+  color: var(--color-light-text); }
+
+.kl-color-accent {
+  color: var(--color-accent-text); }
+
+.kl-color-yellow {
+  color: var(--color-topper-text); }
 
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
