@@ -2,7 +2,7 @@
   <!-- mobile up to md -->
   <div class="grid grid-cols-1 gap-4 px-4 pb-4 kl-bg-alt kl-card-rounded">
     <div class="col-span-1 text-center">
-      <div class="kl-thumbnail-video kl-thumbnail-video-{{index}}" >
+      <div class="kl-thumbnail-video kl-thumbnail-video-{{index}} kl-play-arrow-white cursor-pointer" >
       </div>
     </div>
     <div class="col-span-1 text-center">
@@ -14,7 +14,7 @@
 {% else %}
   <!-- desktop lg+ -->
   <div class="grid grid-cols-5 gap-6 lg:p-6 xl:p-10 kl-bg-alt kl-card-rounded items-center">
-    <div class="col-span-2 sm:order-last kl-thumbnail-video kl-thumbnail-video-{{index}} lg:pr-3 xl:pr-5" >
+    <div class="col-span-2 sm:order-last kl-thumbnail-video kl-thumbnail-video-{{index}} lg:pr-3 xl:pr-5 kl-play-arrow-white cursor-pointer">
     </div>
     <p class="col-span-3 kl-font-header kl-font-header-weight kl-font-body-video-size kl-color-heading kl-font-body-video-line-height lg:pr-6 xl:pr-6">
       {{ text }}

@@ -14692,6 +14692,11 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
   position: relative;
   background-size: contain; }
 
+.kl-play-arrow-white:after {
+  width: 48px;
+  height: 34px;
+  margin-top: -16px; }
+
 @media (min-width: 640px) {
   .kl-thumbnail-video {
     height: 125px; }
@@ -14709,7 +14714,11 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
     width: 200px;
     height: 200px;
     margin-top: -100px;
-    position: absolute; } }
+    position: absolute; }
+  .kl-play-arrow-white:after {
+    width: 96px;
+    height: 64px;
+    margin-top: -32px; } }
 
 /* Large (lg) */
 @media (min-width: 1024px) {
@@ -14721,6 +14730,10 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
   .kl-thumbnail-video::before {
     width: 200px;
     height: 200px;
+    margin-top: 0; }
+  .kl-play-arrow-white:after {
+    width: 96px;
+    height: 64px;
     margin-top: 0; } }
 
 /* Extra Large (xl) */

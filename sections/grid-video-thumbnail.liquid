@@ -27,7 +27,15 @@
     </div>
   </div>
 </section>
-
+<style>
+.kl-play-arrow-white:after {
+  content: "";
+  background: url({{ 'icon-play-video.svg' | asset_url }}) no-repeat;
+  background-size: contain !important;
+  display: inline-block;
+  position: absolute;
+}
+</style>
 {% schema %}
   {
     "name": "Video thumbnails",
