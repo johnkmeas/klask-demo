@@ -26,19 +26,7 @@
   </div>
 
 </section>
-<style>
-{% comment %} iframe .ytp-gradient-top {
-  display: none !important;
-}
 
-.ytp-chrome-top.ytp-show-cards-title {
-  opacity: 0;
-}
-
-.ytp-chrome-top.ytp-show-cards-title:hover {
-  opacity: 1;
-} {% endcomment %}
-</style>
 <script>
 document.addEventListener('DOMContentLoaded', function(event) {
   $(document).ready(function() {
@@ -73,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
         "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "info": "Text",
         "placeholder": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "custom_thumbnail",
+        "label": "Video Custom Thumbnail"
       }
     ],
 
