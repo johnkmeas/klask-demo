@@ -1,7 +1,7 @@
 <section class="py-10 pb-16 sm:py-20">
   <div class="container px-4 sm:mx-auto">
     <div class="pb-6">
-      {% render 'text-heading' with h_type: 'h2', text: section.settings.heading, icon: 'volt' %}
+      {% render 'text-heading' with h_type: 'h2', text: section.settings.heading, icon: section.settings.heading_decoration %}
     </div>
     <!-- Mobile -->
     <ul class="block sm:hidden grid grid-cols-2 gap-4">
@@ -34,6 +34,11 @@
         "type": "text",
         "id": "heading",
         "label": "Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "heading_decoration",
+        "label": "Decoration"
       }
     ],
     "blocks": [
