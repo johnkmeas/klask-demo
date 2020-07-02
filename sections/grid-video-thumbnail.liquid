@@ -1,56 +1,33 @@
-<section>
-  <!-- desktop -->
+<section class="py-10 sm:py-20">
   <div class="container px-4 sm:mx-auto">
-    <div class="hidden sm:block">
-      <div class="grid grid-cols-2 gap-5">
-        {% for block in section.blocks %}
-        {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index %}
-        {% endfor %}
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <div class="col-span-1 lg:col-span-8 lg:col-start-3">
+        {% render 'text-heading' with h_type: 'h1', text: section.settings.heading, icon: section.settings.heading_decoration %}
+        {% render 'text-paragraph' with size: 'large', align: 'center', text: section.settings.content %}
       </div>
     </div>
-    <!-- mobile -->
-    <div class="sm:hidden block">
-      <div class="grid grid-cols-2 gap-3">
-        {% for block in section.blocks %}
-        {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index, screen: 'mobile' %}
-        {% endfor %}
+    <!-- compensate for absolute image overlapping -->
+    <div class="pt-16 md:pt-20 lg:pt-8">
+      <!-- desktop -->
+      <div class="hidden lg:block">
+        <div class="grid grid-cols-2 gap-5">
+          {% for block in section.blocks %}
+          {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index %}
+          {% endfor %}
+        </div>
+      </div>
+      <!-- mobile -->
+      <div class="lg:hidden block">
+        <div class="grid grid-cols-2 gap-3">
+          {% for block in section.blocks %}
+          {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index, screen: 'mobile' %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
 </section>
-<style>
-  .kl-thumbnail-video {
-    width: 320px;
-    height: 125px;
-  }
-  .kl-thumbnail-video::before {
-    content: "";
-    display: inline-block;
-    width: 246px;
-    height: 246px;
-    margin-top: -3.75rem;
-    margin-left: -1.5rem;
-    position: absolute;
-  }
 
-  @media (max-width: 640px) {
-    .kl-thumbnail-video {
-      width: inherit;
-      height: 60.15px;
-    }
-
-    .kl-thumbnail-video::before {
-      content: "";
-      display: inline-block;
-      width: 123px;
-      height: 123px;
-      margin-top: -5rem;
-      margin-left: 0;
-      position: relative;
-      background-size: contain;
-    }
-  }
-</style>
 {% schema %}
   {
     "name": "Video thumbnails",
@@ -62,7 +39,17 @@
       {
         "type": "text",
         "id": "heading",
-        "label": "heading"
+        "label": "Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "heading_decoration",
+        "label": "Decoration"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
       }
     ],
     "blocks": [

@@ -65,6 +65,13 @@
   font-size: var(--font-heading-h2-size);
 }
 
+.kl-font-body-video-line-height {
+  line-height: 2.6rem;
+  @media (max-width: 640px) {
+    line-height: 1.6rem;
+  }
+}
+
 .kl-font-header {
   font-family: var(--font-heading);
 }

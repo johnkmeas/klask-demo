@@ -61,37 +61,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 <style>
-  .kl-thumbnail-video {
-    width: 320px;
-    height: 125px;
-  }
-  .kl-thumbnail-video::before {
-    content: "";
-    display: inline-block;
-    width: 246px;
-    height: 246px;
-    margin-top: -3.75rem;
-    margin-left: -1.5rem;
-    position: absolute;
-  }
-
-  @media (max-width: 640px) {
-    .kl-thumbnail-video {
-      width: inherit;
-      height: 60.15px;
-    }
-
-    .kl-thumbnail-video::before {
-      content: "";
-      display: inline-block;
-      width: 123px;
-      height: 123px;
-      margin-top: -5rem;
-      margin-left: 0;
-      position: relative;
-      background-size: contain;
-    }
-  }
   .kl-button-border {
     border: 2px solid;
     border-color: var(--color-heading-text);
