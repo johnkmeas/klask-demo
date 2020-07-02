@@ -1,44 +1,3 @@
-.kl-icon:after {
-  content: ""; }
-
-.slick-review-nav .slick-track {
-  padding-bottom: 25px; }
-
-.slick-review-nav .slick-current:after {
-  background-image: linear-gradient(to right, transparent 50%, #0a00a3 50%);
-  background-size: 25px 100%;
-  content: "";
-  height: 3px;
-  margin-top: 20px;
-  position: absolute;
-  width: inherit; }
-  @media (min-width: 641px) {
-    .slick-review-nav .slick-current:after {
-      margin-left: -10px; } }
-
-.kl-icon-mx-auto-child > * {
-  margin: 0 auto; }
-
-.kl-icon-arrow-dashed:after {
-  content: "";
-  background: url(../assets/icon-arrow-dashed.svg) no-repeat;
-  background-size: contain !important;
-  content: "";
-  display: inline-block;
-  height: 170px;
-  width: 173px;
-  position: absolute;
-  z-index: 1; }
-
-.kl-icon-arrow-dashed-mobile:after {
-  content: "";
-  background: url(../assets/icon-arrow-dashed-mobile.svg) no-repeat;
-  background-size: contain !important;
-  display: inline-block;
-  height: 64px;
-  width: 65px;
-  position: absolute; }
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -14651,7 +14610,7 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
     font-size: 32px; } }
 
 .kl-font-fluid-size {
-  font-size: calc(26px + (108 - 26) * ((100vw - 370px) / (1600 - 370))); }
+  font-size: calc(26px + (108 - 26) * ((100vw - 375px) / (1680 - 375))); }
 
 .kl-font-fluid-weight {
   font-weight: var(--font-body-weight); }
@@ -14691,6 +14650,27 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
 
 .kl-input-placeholder-color::-webkit-input-placeholder {
   color: var(--color-body-text); }
+
+.kl-icon:after {
+  content: ""; }
+
+.slick-review-nav .slick-track {
+  padding-bottom: 25px; }
+
+.slick-review-nav .slick-current:after {
+  background-image: linear-gradient(to right, transparent 50%, #0a00a3 50%);
+  background-size: 25px 100%;
+  content: "";
+  height: 3px;
+  margin-top: 20px;
+  position: absolute;
+  width: inherit; }
+  @media (min-width: 641px) {
+    .slick-review-nav .slick-current:after {
+      margin-left: -10px; } }
+
+.kl-icon-mx-auto-child > * {
+  margin: 0 auto; }
 
 .kl-button-height {
   height: 64px; }

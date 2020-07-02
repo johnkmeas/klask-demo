@@ -15,12 +15,15 @@
       </div>
       <!-- video -->
       <div class="col-span-1 sm:col-span-2 relative">
-        {% comment %} <span class="bg-cover bg-center  w-full h-full block" style="background-image: url({{ section.settings.custom_thumbnail.src | img_url: 'master' }})"></span> {% endcomment %}
-        <img src="{{ section.settings.custom_thumbnail.src | img_url: 'master' }}" alt="" class="src">
+        <span class=""">
+          <span class="kl-play-arrow-blue">
+          </span>
+          <img src="{{ section.settings.custom_thumbnail.src | img_url: 'master' }}" alt="" class="">
+        </span>
+         
         {% assign embed_key = section.settings.video_url | split: 'https://youtu.be/' %}
         {% assign embed_key = embed_key | last %}
         {% assign video_src = 'https://www.youtube.com/embed/' | append:  embed_key | append: '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' %}
-        {% comment %} <iframe class="w-full h-full" src="{{ video_src }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
       </div>
        <!-- mobile title -->
       <div class="sm:col-span-2 pt-6 sm:hidden block">
@@ -38,6 +41,56 @@
 
 </section>
 <style>
+.kl-play-arrow-blue {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+}
+
+.kl-play-arrow-blue:after {
+  content: "";
+  background: url({{ 'icon-play-blue.svg' | asset_url }}) no-repeat;
+  background-size: contain !important;
+  display: inline-block;
+  width: calc(103px + (137 - 103) * ((100vw - 370px) / (1600 - 370)));
+  height: calc(97px + (129 - 97) * ((100vw - 370px) / (1600 - 370)));
+  position: absolute;
+}
+
+.kl-play-arrow-blue-mobile:after {
+  content: "";
+  background: url({{ 'icon-play-blue-mobile.svg' | asset_url }}) no-repeat;
+  background-size: contain !important;
+  display: inline-block;
+  height: 60px;
+  width: 40px;
+  position: absolute;
+}
+
+.kl-icon-arrow-dashed:after {
+    content: "";
+    background: url({{ 'icon-arrow-dashed.svg' | asset_url }}) no-repeat;
+    background-size: contain !important;
+    content: "";
+    display: inline-block;
+    height: 170px;
+    width: 173px;
+    position: absolute;
+    z-index: 1;
+}
+
+.kl-icon-arrow-dashed-mobile:after {
+  content: "";
+  background: url({{ 'icon-arrow-dashed-mobile.svg' | asset_url }}) no-repeat;
+  background-size: contain !important;
+  display: inline-block;
+  height: 64px;
+  width: 65px;
+  position: absolute;
+}
 
 </style>
 <script>
