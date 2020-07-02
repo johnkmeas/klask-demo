@@ -12,13 +12,11 @@
 
 <div {{data}} class="js-product kl-border kl-border-color kl-card-rounded p-12 " style="display: {{ display }};">
   <h3 class="hidden sm:block kl-font-header k1-font-header-product-size text-center">{{ all_products[ product].title }}</h3>
-
-
     {% render 'text-paragraph' with size: 'product', align: 'center', text: text %}
     <div class="flex justify-center">
       <img class="flex justify-center" src="{{ all_products[ product].featured_image | img_url: "large" }}" alt="">
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 pt-12">
       <span class="kl-h2 kl-font-header-weight text-center flex flex-col justify-center">
         {{ all_products[ product].price | money }}
       </span>
