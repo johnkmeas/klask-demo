@@ -1,0 +1,34 @@
+<section class="py-10 pb-16 sm:py-20">
+  <div class="container px-4 sm:mx-auto">
+    {% render 'text-heading' with h_type: 'h1', text: section.settings.heading, icon: 'volt' %}
+    {% render 'text-paragraph' with size: 'large', align: 'center', text: section.settings.content %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Basic Section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Basic Section"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Basic Section",
+        "category": "Section"
+      }
+    ]
+  }
+{% endschema %}
