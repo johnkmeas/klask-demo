@@ -30,6 +30,8 @@
     --font-link-size: 20px;
 
 */
+
+// body
 .kl-font-body {
   font-family: var(--font-body);
 }
@@ -42,6 +44,7 @@
   font-size: var(--font-body-size);
 }
 
+// heading
 .kl-font-body-medium-size {
   font-size: var(--font-heading-h4-size);
 }
@@ -145,5 +148,17 @@
   .kl-h1,
   .kl-font-shout-out-size {
     font-size: 32px;
+  }
+}
+
+.kl-font-fluid-size {
+  font-size: calc(26px + (108 - 26) * ((100vw - 370px) / (1600 - 370)));
+}
+
+.kl-font-fluid-weight {
+  font-weight: var(--font-body-weight);
+
+  @media (max-width: 640px) {
+    font-weight: var(--font-heading-weight);
   }
 }

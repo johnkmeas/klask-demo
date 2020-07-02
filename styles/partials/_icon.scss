@@ -43,3 +43,29 @@
     margin: 0 auto;
   }
 }
+
+.kl-icon-arrow-dashed {
+  &:after {
+    content: "";
+    background: url(../assets/icon-arrow-dashed.svg) no-repeat;
+    background-size: contain !important;
+    content: "";
+    display: inline-block;
+    height: 170px;
+    width: 173px;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.kl-icon-arrow-dashed-mobile {
+  &:after {
+    content: "";
+    background: url(../assets/icon-arrow-dashed-mobile.svg) no-repeat;
+    background-size: contain !important;
+    display: inline-block;
+    height: 64px;
+    width: 65px;
+    position: absolute;
+  }
+}

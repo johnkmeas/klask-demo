@@ -19,6 +19,26 @@
 .kl-icon-mx-auto-child > * {
   margin: 0 auto; }
 
+.kl-icon-arrow-dashed:after {
+  content: "";
+  background: url(../assets/icon-arrow-dashed.svg) no-repeat;
+  background-size: contain !important;
+  content: "";
+  display: inline-block;
+  height: 170px;
+  width: 173px;
+  position: absolute;
+  z-index: 1; }
+
+.kl-icon-arrow-dashed-mobile:after {
+  content: "";
+  background: url(../assets/icon-arrow-dashed-mobile.svg) no-repeat;
+  background-size: contain !important;
+  display: inline-block;
+  height: 64px;
+  width: 65px;
+  position: absolute; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -14629,6 +14649,15 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
   .kl-h1,
   .kl-font-shout-out-size {
     font-size: 32px; } }
+
+.kl-font-fluid-size {
+  font-size: calc(26px + (108 - 26) * ((100vw - 370px) / (1600 - 370))); }
+
+.kl-font-fluid-weight {
+  font-weight: var(--font-body-weight); }
+  @media (max-width: 640px) {
+    .kl-font-fluid-weight {
+      font-weight: var(--font-heading-weight); } }
 
 /* Color */
 .kl-color-blue,

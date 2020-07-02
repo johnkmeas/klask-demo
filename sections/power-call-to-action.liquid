@@ -1,10 +1,31 @@
 <section class="sm:py-20">
   <!-- Slide content-->
   <div class="container sm:mx-auto pb-2 sm:pb-5">
-    <div class="sm:grid sm:grid-cols-3 ">
-      <div class="col-span-1 p-10 kl-tutorial-left-rounded">
+    <div class="sm:grid sm:grid-cols-3 gap-5">
+      <!-- Desktop title -->
+      <div class="col-span-1 hidden sm:block">
+        <div class="flex flex-col h-full justify-center">
+          <span class="kl-font-fluid-size kl-font-shout-line-height kl-font-fluid-weight kl-font-header kl-color-heading sm:pb-2 text-center sm:text-left kl-icon-arrow-dashed">
+            {{ section.settings.heading }}
+          </span>
+          <span class="kl-h3 kl-font-header kl-color-yellow text-center sm:text-left sm:mb-5">
+            {{ section.settings.sub_heading }}
+          </span>
+        </div>
+      </div>
+      <!-- video -->
+      <div class="col-span-1 sm:col-span-2 relative">
+        {% comment %} <span class="bg-cover bg-center  w-full h-full block" style="background-image: url({{ section.settings.custom_thumbnail.src | img_url: 'master' }})"></span> {% endcomment %}
+        <img src="{{ section.settings.custom_thumbnail.src | img_url: 'master' }}" alt="" class="src">
+        {% assign embed_key = section.settings.video_url | split: 'https://youtu.be/' %}
+        {% assign embed_key = embed_key | last %}
+        {% assign video_src = 'https://www.youtube.com/embed/' | append:  embed_key | append: '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' %}
+        {% comment %} <iframe class="w-full h-full" src="{{ video_src }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endcomment %}
+      </div>
+       <!-- mobile title -->
+      <div class="sm:col-span-2 pt-6 sm:hidden block">
         <div class="flex flex-col">
-          <span class="kl-font-shout-out-size kl-font-shout-line-height kl-font-header kl-color-heading mb-5">
+          <span class="kl-h2 kl-font-header kl-font-header-weight kl-color-heading text-center sm:text-left kl-icon-arrow-dashed-mobile">
             {{ section.settings.heading }}
           </span>
           <span class="kl-h3 kl-font-header kl-color-yellow text-center mb-5">
@@ -12,21 +33,13 @@
           </span>
         </div>
       </div>
-      <div>
-        {% assign embed_key = section.settings.video_url | split: 'https://youtu.be/' %}
-        {% assign embed_key = embed_key | last %}
-        {% assign embed_key = 'https://www.youtube.com/embed/' | append:  embed_key | append: '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' %}
-        {{ embed_key}}
-
-        <iframe width="560" height="315" src="{{ embed_key }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      {% comment %} <div class="hidden sm:block col-span-2 kl-tutorial-right-rounded bg-cover bg-center" style="background-image: url({{ section.settings.video_thumbnail.src | img_url: 'master' }})">
-      </div> {% endcomment %}
     </div>
   </div>
 
 </section>
+<style>
 
+</style>
 <script>
 document.addEventListener('DOMContentLoaded', function(event) {
   $(document).ready(function() {
