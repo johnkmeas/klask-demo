@@ -1,8 +1,8 @@
 <section class="sm:py-20">
   <!-- Slide content-->
-  <div class="container sm:mx-auto pb-2 sm:pb-5">
-    <div class="sm:grid sm:grid-cols-3 ">
-      <div class="col-span-1 kl-bg-yellow p-10 kl-tutorial-left-rounded">
+  <div class="container sm:mx-auto sm:pb-5">
+    <div class="sm:grid sm:grid-cols-6 ">
+      <div class="col-span-1 sm:col-span-3 lg:col-span-2 kl-bg-yellow p-10 sm:p-12 kl-tutorial-left-rounded">
         <div class="flex flex-col">
 
           <h3 class="kl-h3-tutorial kl-font-header kl-color-heading text-center mb-5">
@@ -12,15 +12,20 @@
           <div>
             {% render 'text-paragraph' with size: 'tutorial', text: section.settings.content, color_class: 'kl-color-body-blue' %}
           </div>
-          <a class="kl-h4 kl-color-heading kl-font-header-weight underline" href="section.settings.cta_1_url">
+
+          <a class="kl-h4 kl-font-body kl-color-heading kl-font-header-weight underline" href="section.settings.cta_1_url">
             {{ section.settings.cta_1_text }}
           </a>
-          <a class="kl-h4 kl-color-heading kl-font-header-weight underline" href="section.settings.cta_2_url">
+          <span class="py-6">
+            {% render 'icon-line-dashed-svg' %}
+          </span>
+          <a class="kl-mix-font kl-font-body kl-color-heading underline" href="section.settings.cta_2_url">
             {{ section.settings.cta_2_text }}
           </a>
+
         </div>
       </div>
-      <div class="hidden sm:block col-span-2 kl-tutorial-right-rounded bg-cover bg-center" style="background-image: url({{ section.settings.video_thumbnail.src | img_url: 'master' }})">
+      <div class="col-span-1 sm:col-span-3 lg:col-span-4 hidden sm:block col-span-2 kl-tutorial-right-rounded bg-cover bg-center" style="background-image: url({{ section.settings.video_thumbnail.src | img_url: 'master' }})">
       </div>
     </div>
   </div>
@@ -32,6 +37,19 @@
     display: flex;
     align-items: center;
   }
+
+  .kl-mix-font {
+    font-size: 17px;
+  }
+
+  .kl-mix-font p {
+    font-weight: 500;
+  }
+
+  .kl-mix-font strong {
+    font-weight: 700;
+  }
+
 </style>
 
 {% schema %}
@@ -90,7 +108,7 @@
         "content": "Secondary Call to Action"
       },
       {
-        "type": "text",
+        "type": "richtext",
         "id": "cta_2_text",
         "label": "Call to Action"
       },
