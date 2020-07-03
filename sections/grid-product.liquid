@@ -1,9 +1,9 @@
-<section>
+<section class="py-10 sm:py-20">
   <!-- desktop -->
   <div class="container px-4 md:px-0 sm:mx-auto">
     {% render 'text-heading' with h_type: 'h2', text: section.settings.heading, icon: section.settings.heading_decoration %}
     <div class="hidden sm:block">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 ">
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 lg:gap-20 ">
         {% for block in section.blocks %}
         {% render 'card-product' with text: block.settings.excerpt, product: block.settings.product %}
         {% endfor %}
@@ -11,7 +11,7 @@
     </div>
     <!-- mobile -->
     <div class="sm:hidden">
-      <div class="grid grid-cols-2 kl-button-group kl-button-border kl-button-height kl-button-rounded kl-color-button-alt">
+      <div class="grid grid-cols-2 kl-button-group kl-button-border kl-button-height kl-button-rounded kl-color-button-alt mb-6">
         {% for block in section.blocks %}
           {% if forloop.index == 1 %}
             {% assign active = 'active' %}

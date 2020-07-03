@@ -12,6 +12,14 @@
   border-color: var(--color-body_borders);
 }
 
+@media (min-width: 640px) {
+  .kl-border-product {
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color-body_borders);
+  }
+}
+
 .kl-tutorial-left-rounded {
   @media (min-width: 641px) {
     border-radius: 10px 0 0 10px;
