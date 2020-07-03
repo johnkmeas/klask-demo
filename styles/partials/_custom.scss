@@ -12,37 +12,6 @@
   border-color: var(--color-body_borders);
 }
 
-// SLICK SLIDE
-.slick-slide {
-  margin: 0 5px;
-}
-button.slick-arrow {
-  &.slick-next,
-  &.slick-prev {
-    display: none !important;
-  }
-}
-
-.slick-dots {
-  margin-bottom: -30px;
-
-  li {
-    margin: 0 2px;
-
-    button:before {
-      color: #ffffff !important;
-      font-size: 16px;
-    }
-  }
-}
-
-.slick-review-nav {
-  .slick-track {
-    display: flex;
-    align-items: center;
-  }
-}
-
 .kl-tutorial-left-rounded {
   @media (min-width: 641px) {
     border-radius: 10px 0 0 10px;
@@ -51,35 +20,6 @@ button.slick-arrow {
 
 .kl-tutorial-right-rounded {
   border-radius: 0 10px 10px 0;
-}
-
-.kl-product-button-group {
-}
-
-.kl-button-height {
-  height: 64px;
-}
-
-.kl-button-xp {
-  padding: 0 34px;
-}
-
-.kl-button-rounded {
-  border-radius: 5px;
-}
-
-.kl-button-border-side {
-  &:first-child {
-    border-right: 1px solid var(--color-heading-text);
-  }
-  &:nth-child(2) {
-    border-left: 1px solid var(--color-heading-text);
-  }
-
-  &:hover,
-  &.active {
-    background-color: var(--color-topper-text);
-  }
 }
 
 .kl-rotate-svg-180 {

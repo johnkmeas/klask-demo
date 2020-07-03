@@ -20,3 +20,19 @@
 .kl-bg-yellow {
   background-color: var(--color-button-alt);
 }
+
+.kl-shadow {
+  box-shadow: 0px 0px 9px 0px #00000029;
+}
+
+.kl-nav-sublink {
+  display: none;
+}
+
+.kl-hover-sublink {
+  &:hover {
+    .kl-nav-sublink {
+      display: block;
+    }
+  }
+}

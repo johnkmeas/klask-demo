@@ -31,25 +31,49 @@
     <div class=" hidden sm:block flex flex-col justify-between h-screen py-24 sm:py-0 sm:h-20">
       <ul class="grid grid-cols-7 h-full px-12 sm:px-0">
         {% for link in linklists.main-menu.links %}
-          {% if forloop.index <= 3 %}
-            {% assign align_item = 'items-start' %}
-          {% elsif forloop.index > 3 %}
-            {% assign align_item = 'items-end' %}
-          {% endif %}
+        
+        {% if forloop.index <= 3 %}
+          {% assign align_item = 'items-start' %}
+        {% elsif forloop.index > 3 %}
+          {% assign align_item = 'items-end' %}
+        {% endif %}
+
           {% if link.active %}
             {% assign link_active = 'active' %}
           {% else %}
             {% assign link_active = '' %}
           {% endif %}
-          <li class="flex flex-col justify-center {{ align_item }}">
+
+          {% if link.links != blank %}
+            {% assign has_sublink = 'kl-hover-sublink' %}
+          {% else %}
+            {% assign has_sublink = '' %}
+          {% endif %}
+
+
+
+
+          <li class="relative flex flex-col justify-center {{ has_sublink }} items-center">
             <a href="{{ link.url }}" class="kl-nav-item {{ link_active }} block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav relative">{{ link.title }}</a>
+            {% if link.links != blank %}
+              <div class="absolute kl-nav-sublink kl-nav-sublink-mt kl-bg-white top-0 kl-shadow kl-card-rounded">
+                <div class="flex justify-center kl-top-triangle"></div>
+                <ul class="p-6">
+                  {% for sub_link in link.links %}
+                    <li>
+                      <a href="{{ sub_link.url }}" class="kl-font-header kl-font-body-subnav-size kl-font-body-weight kl-color-heading">{{ sub_link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
           </li>
           {% if forloop.index == 3 %}
             <li class="flex flex-col justify-center items-center ">
               {% render 'logo-klask-svg' %}
             </li>
           {% elsif forloop.last %}
-            <li class="flex flex-col justify-center {{ align_item }}">
+            <li class="flex flex-col justify-center items-center">
               <span class="cursor-pointer">
                 {% render 'icon-cart-circle-svg' %}
               </span>
@@ -60,21 +84,25 @@
     </div>
 
     <!-- mobile offcanvas nav -->
-    <div class="sm:hidden block flex flex-col justify-between h-screen py-24 sm:py-0 sm:h-20 sm:h-20">
+    <div class="sm:hidden block flex flex-col justify-between h-screen pt-24 pb-16 sm:py-0 sm:h-20 sm:h-20">
       <ul class="flex flex-col item-start sm:flex-row sm:flex-wrap sm:justify-between sm:content-center h-full px-12 sm:px-0">
         {% for link in linklists.main-menu.links %}
-        <li>
-          <a href="{{ link.url }}" class="block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
+        {% if link.active %}
+          {% assign link_active = 'active' %}
+        {% else %}
+          {% assign link_active = '' %}
+        {% endif %}
+
+        <li class="mb-5">
+          <a href="{{ link.url }}" class="kl-nav-item-mobile block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav relative {{ link_active }}">{{ link.title }}</a>
         </li>
         {% endfor %}
       </ul>
-      <button class="js-close-mobile-nav sm:hidden kl-font-body kl-font-body-size kl-font-body kl-color-blue">close</button>
+      <button class="js-close-mobile-nav sm:hidden kl-font-body kl-font-body-size kl-font-body kl-color-blue kl-close-button flex flex-col items-center">
+        {% render 'icon-close-circle-svg' %}
+        close
+      </button>
     </div>
-    <!-- {% for link in linklists.main-menu.links %}
-      <a href="{{ link.url }}">{{ link.title }}</a>
-
-      
-    {% endfor %} -->
   </nav>
 </header>
 <style>
@@ -97,20 +125,51 @@
   }
 
   .kl-nav-item.active:after,
+  .kl-nav-item-mobile.active:before,
   .kl-nav-item:hover:after {
-    content: "";
     background: url({{ 'icon-circle-hover.svg' | asset_url }}) no-repeat;
+  }
+
+  .kl-nav-item.active:after,
+  .kl-nav-item:hover:after {
     background-size: contain !important;
     bottom: 0;
+    content: "";
     display: inline-block;
-    width: 11px;
     height: 11px;
     left: 50%;
-    /* padding-right: 5px; */
-    margin-left: -5px;
     margin-bottom: -10px;
+    margin-left: -5px;
     position: absolute;
+    width: 11px;
   }
+
+  .kl-nav-item-mobile.active:before {
+    background-size: contain !important;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+    margin-top: 25px;
+    margin-left: -35px;
+    top: 0;
+  }
+
+  /* sublink */
+  .kl-top-triangle:before {
+    content: "";
+    background: url({{ 'icon-corner-top-sublink.svg' | asset_url }}) no-repeat;
+    background-size: contain !important;
+    display: inline-block;
+    height: 41px;
+    margin-top: -25px;
+    position: absolute;
+    width: 81px;
+  }
+
+
 </style>
 <script>
   document.querySelector('.js-close-mobile-nav').addEventListener('click', function() {
