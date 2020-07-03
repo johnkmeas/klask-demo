@@ -163,7 +163,26 @@
 }
 
 .kl-font-fluid-size {
-  font-size: calc(26px + (108 - 26) * ((100vw - 375px) / (1680 - 375)));
+  /* font-size: calc(26px + (108 - 26) * ((100vw - 375px) / (1680 - 375))); */
+  font-size: 32px;
+  @media (min-width: 640px) {
+    font-size: 60px;
+  }
+
+  /* Medium (md) */
+  @media (min-width: 768px) {
+    font-size: 72px;
+  }
+  
+  /* Large (lg) */
+  @media (min-width: 1024px) {
+    font-size: 95px;
+  }
+  
+  /* Extra Large (xl) */
+  @media (min-width: 1280px) {
+    font-size: 108px;
+  }
 }
 
 .kl-font-fluid-weight {

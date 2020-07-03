@@ -14592,7 +14592,23 @@ video {
     font-size: 32px; } }
 
 .kl-font-fluid-size {
-  font-size: calc(26px + (108 - 26) * ((100vw - 375px) / (1680 - 375))); }
+  /* font-size: calc(26px + (108 - 26) * ((100vw - 375px) / (1680 - 375))); */
+  font-size: 32px;
+  /* Medium (md) */
+  /* Large (lg) */
+  /* Extra Large (xl) */ }
+  @media (min-width: 640px) {
+    .kl-font-fluid-size {
+      font-size: 60px; } }
+  @media (min-width: 768px) {
+    .kl-font-fluid-size {
+      font-size: 72px; } }
+  @media (min-width: 1024px) {
+    .kl-font-fluid-size {
+      font-size: 95px; } }
+  @media (min-width: 1280px) {
+    .kl-font-fluid-size {
+      font-size: 108px; } }
 
 .kl-font-fluid-weight {
   font-weight: var(--font-body-weight); }
