@@ -1,3 +1,17 @@
+.kl-icon:after {
+  content: ""; }
+
+.slick-review-nav .slick-current:after {
+  /*
+      background-image: linear-gradient(to right, transparent 30%, #0a00a3 30%);
+      background-size: 20px 100%;
+      content: "";
+      height: 3px;
+      margin-top: 20px;
+      position: absolute;
+      width: inherit;
+*/ }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -14703,24 +14717,6 @@ video {
 
 .kl-input-placeholder-color::-webkit-input-placeholder {
   color: var(--color-body-text); }
-
-.kl-icon:after {
-  content: ""; }
-
-.slick-review-nav .slick-track {
-  padding-bottom: 25px; }
-
-.slick-review-nav .slick-current:after {
-  background-image: linear-gradient(to right, transparent 30%, #0a00a3 30%);
-  background-size: 20px 100%;
-  content: "";
-  height: 3px;
-  margin-top: 20px;
-  position: absolute;
-  width: inherit; }
-  @media (min-width: 641px) {
-    .slick-review-nav .slick-current:after {
-      margin-left: -10px; } }
 
 .kl-thumbnail-video {
   display: flex;

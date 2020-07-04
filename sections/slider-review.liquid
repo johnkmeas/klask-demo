@@ -1,6 +1,6 @@
 <section class="kl-bg-off-white py-10 sm:py-20">
   <!-- Slide content-->
-  <div class="container px-5 sm:mx-auto pb-2 sm:pb-5">
+  <div class="container px-5 sm:mx-auto">
     <div class="px-4 sm:px-0 sm:grid sm:grid-cols-1 sm:grid-cols-12 sm:pb-10">
       <div class="sm:col-start-2 sm:col-span-10">
         <ul class="slick-review-content">
@@ -13,10 +13,11 @@
       </div>
   </div>
   <!-- Slide nav-->
-  <ul class="slick-review-nav container mx-auto">
+  <ul class="slick-review-nav container mx-auto sm:px-16">
     {% for block in section.blocks %}
-      <li class="cursor-pointer">
+      <li class="cursor-pointer text-center">
         <img src="{{ block.settings.logo_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.logo_thumbnail.alt }}" class="px-5 mx-auto">
+        <span class="kl-line-dash"></span>
       </li>
     {% endfor %}
   </ul>
@@ -27,6 +28,37 @@
     align-items: center;
     display: flex;
   }
+
+  .slick-review-nav .kl-line-dash::after {
+    background: url({{ 'icon-underline-dashed-mobile.svg' | asset_url }}) no-repeat;
+    background-size: contain !important;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    opacity: 0;
+    width: 87px;
+  }
+
+  .slick-review-nav .slick-current .kl-line-dash::after {
+    opacity: 1;
+  }
+
+  @media (min-width: 640px) {
+    .slick-review-nav .kl-line-dash::after {
+      background: url({{ 'icon-underline-dashed.svg' | asset_url }}) no-repeat;
+      background-size: contain !important;
+      content: "";
+      display: inline-block;
+      height: 4px;
+      opacity: 0;
+      width: 183px;
+    }
+  
+    .slick-review-nav .slick-current .kl-line-dash::after {
+      opacity: 1;
+    }
+  }
+
 </style>
 
 {% schema %}
