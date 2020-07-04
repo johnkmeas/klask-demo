@@ -1,10 +1,54 @@
 <footer>
   <nav class="kl-bg-alt py-10 sm:py-20">
+    <div class="container px-5 sm:mx-auto ">
+
+
+      <div class="hidden sm:grid sm:grid-cols-2 sm:grid-cols-12 sm:gap-10 sm:gap-24">
+        <div class="col-span-10 col-start-2 flex flex-row justify-between">
+          {% for link in linklists.footer.links %}
+            <ul class="kl-nav-link-line-height">
+              <!-- {{ link.title }}: child_active: {{ link.child_active }} -->
+              <li class="pb-2">
+                <a href="{{ link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
+              </li>
+              {% for sub_link in link.links %}
+                <li>
+                  <a href="{{ sub_link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-footer-nav">{{ sub_link.title }}</a>
+                </li>
+    
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- mobile -->
+      <div class="sm:hidden grid grid-cols-2 sm:grid-cols-4 gap-10 sm:gap-4">
+        {% for link in linklists.footer.links %}
+          <ul class="kl-nav-link-line-height">
+            <li class="pb-2">
+              <a href="{{ link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
+            </li>
+            {% for sub_link in link.links %}
+              <li>
+                <a href="{{ sub_link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-footer-nav">{{ sub_link.title }}</a>
+              </li>
+  
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+
+    </div>
+  </nav>
+
+
+  
+  <!-- <nav class="kl-bg-alt py-10 sm:py-20">
     <div class="container px-5 sm:px-0 sm:mx-auto ">
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-10 sm:gap-4">
         {% for link in linklists.footer.links %}
           <ul class="kl-nav-link-line-height">
-            <!-- {{ link.title }}: child_active: {{ link.child_active }} -->
             <li class="pb-2">
               <a href="{{ link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
             </li>
@@ -18,7 +62,7 @@
         {% endfor %}
       </div>
     </div>
-  </nav>
+  </nav> -->
   <div class="py-6 kl-font-footer-size kl-color-footer-nav flex flex-row flex-wrap justify-center content-center items-center">Copyright &copy; 2020 Klask All Rights Reserved</div>
 </footer>
 
