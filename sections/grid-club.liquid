@@ -11,7 +11,7 @@
     </ul>
   </div>
   <!-- Desktop -->
-  <ul class="hidden sm:block slick-club">
+  <ul class="hidden sm:block slick-club kl-club-slick">
     {% for block in section.blocks %}
       <li class="">
         <img src="{{ block.settings.club_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.club_thumbnail.alt }}" class="script">
@@ -73,9 +73,6 @@
       </div>
     </div>
   </div>
-
-
-
 </section>
 
 {% schema %}

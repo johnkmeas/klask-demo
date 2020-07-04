@@ -14438,6 +14438,9 @@ video {
 .kl-nav-height {
   height: 82px; }
 
+.kl-card-testimony-rounded {
+  border-radius: 5px; }
+
 .kl-card-rounded {
   border-radius: 10px; }
 
@@ -14834,6 +14837,13 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
   display: flex;
   align-items: center; }
 
+/*
+.kl-club-slick {
+  .slick-slide {
+    margin: 0;
+  }
+}
+*/
 .kl-bg-white,
 .kl-bg-main {
   background-color: var(--color-main-background); }

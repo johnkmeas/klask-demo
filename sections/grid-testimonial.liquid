@@ -20,9 +20,9 @@
   <ul class="flex slick-testimony">
     {% for block in section.blocks %}
       <li class="flex-grow">
-        <div class="kl-bg-white kl-card-rounded p-4 flex flex-col h-full">
+        <div class="kl-bg-white kl-card-testimony-rounded p-6 sm:p-8 flex flex-col h-full">
           <h4 class="kl-h3 kl-font-header kl-font-header-weight kl-color-dark pb-4">{{ block.settings.heading_testimony }}</h4>
-          {% render 'text-paragraph' with size: 'body', text: block.settings.body_testimony %}
+          {% render 'text-paragraph' with size: 'body', text: block.settings.body_testimony, custom_class: 'leading-relaxed' %}
           {% render 'text-paragraph' with size: 'body', text: block.settings.name_testimony, padding: 'none' %}
         </div>
       </li>
