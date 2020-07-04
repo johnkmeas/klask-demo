@@ -1,0 +1,226 @@
+/* 
+    --color-heading-text: #0a00a3;
+    --color-body-text: #333232;
+    --color-header-nav-text: #0a00a3;
+    --color-footer-nav-text: #323232;
+    --color-topper-text: #ffd40e;
+    --color-light-text: #ffffff;
+    --color-accent-text: ;
+    --color-button: #0a00a3;
+    --color-button-text: #ffffff;
+    --color-button-alt: #ffd40e;
+    --color-button-text-alt: #0a00a3;
+    --font-button-weight: bold;
+    --color-text-field-text: #0a00a3;
+    --color-text-field-border: #0a00a3;
+    --color-main-background: #ffffff;
+    --color-body-bg-alt: #f4f3ff;
+    --color-body-bg-dark: #0a00a3;
+    --color-body_borders: #f4f3ff;
+    --font-heading: Dosis, sans-serif;
+    --font-heading-weight: 600;
+    --font-heading-h1-size: 48px;
+    --font-heading-h2-size: 32px;
+    --font-heading-h3-size: 26px;
+    --font-heading-h4-size: 20px;
+    --font-body: Dosis, sans-serif;
+    --font-body-weight: 500;
+    --font-body-size: 18px;
+    --font-footer-size: 14px;
+    --font-link-size: 20px;
+
+*/
+
+// body
+.kl-font-body {
+  font-family: var(--font-body);
+}
+
+.kl-font-body-weight {
+  font-weight: var(--font-body-weight);
+}
+
+.kl-font-body-size {
+  font-size: var(--font-body-size);
+}
+
+// heading
+.kl-font-body-medium-size {
+  font-size: var(--font-heading-h4-size);
+}
+
+.kl-font-body-large-size {
+  font-size: var(--font-heading-h3-size);
+}
+
+.kl-font-body-review-size {
+  font-size: var(--font-heading-h3-size);
+}
+
+.kl-font-body-product-size {
+  font-size: 22px;
+}
+
+.kl-font-body-subnav-size {
+  font-size: 21px;
+}
+
+.kl-font-body-video-size {
+  font-size: var(--font-heading-h2-size);
+}
+
+.kl-font-body-video-line-height {
+  line-height: 2.6rem;
+  @media (max-width: 640px) {
+    line-height: 1.6rem;
+  }
+}
+
+.kl-font-header {
+  font-family: var(--font-heading);
+}
+
+.kl-font-header-weight,
+.kl-font-header-nav-weight {
+  font-weight: var(--font-heading-weight);
+}
+
+/* hero */
+.kl-font-hero-size {
+  font-size: 48px;
+
+  @media (min-width: 640px) {
+    font-size: 80px;
+  }
+
+  /* Medium (md) */
+  @media (min-width: 768px) {
+    font-size: 90px;
+  }
+  
+  /* Large (lg) */
+  @media (min-width: 1024px) {
+    font-size: 100px;
+  }
+  
+  /* Extra Large (xl) */
+  @media (min-width: 1280px) {
+    font-size: var(--font-hero-size);
+  }
+}
+
+.kl-font-hero-weight {
+  font-weight: var(--font-hero-weight);
+
+  @media (max-width: 640px) {
+    font-weight: var(--font-heading-weight);
+  }
+}
+
+.kl-font-hero-line-height {
+  line-height: 3.4rem;
+}
+
+.kl-font-shout-out-size {
+  font-size: var(--font-hero-size);
+}
+
+.kl-font-shout-line-height {
+  line-height: 1em;
+}
+
+.kl-h1 {
+  font-size: var(--font-heading-h1-size);
+}
+
+.kl-h2 {
+  font-size: var(--font-heading-h2-size);
+}
+
+.kl-h3 {
+  font-size: var(--font-heading-h3-size);
+}
+
+.kl-h3-tutorial {
+  font-size: 30px;
+  font-weight: bold;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    font-weight: var(--font-heading-weight);
+  }
+}
+
+.kl-h4 {
+  font-size: var(--font-heading-h4-size);
+}
+
+.k1-font-header-product-size {
+  font-size: var(--font-heading-h2-size);
+}
+
+.kl-font-footer-size {
+  font-size: var(--font-footer-size);
+}
+
+.kl-font-link-size {
+  font-size: var(--font-link-size);
+}
+
+.kl-font-link-size {
+  font-size: var(--font-link-size);
+}
+
+@media (max-width: 640px) {
+  .kl-font-header-mobile-link-size {
+    font-size: 48px;
+  }
+  .kl-font-body-large-size,
+  .kl-font-body-product-size,
+  .kl-font-body-video-size,
+  .k1-font-header-product-size {
+    font-size: var(--font-heading-h4-size);
+  }
+
+  .kl-font-body-medium-size {
+    font-size: var(--font-body-size);
+  }
+}
+
+@media (max-width: 640px) {
+  .kl-h1,
+  .kl-font-shout-out-size {
+    font-size: 32px;
+  }
+}
+
+.kl-font-fluid-size {
+  /* font-size: calc(26px + (108 - 26) * ((100vw - 375px) / (1680 - 375))); */
+  font-size: 32px;
+  @media (min-width: 640px) {
+    font-size: 60px;
+  }
+
+  /* Medium (md) */
+  @media (min-width: 768px) {
+    font-size: 72px;
+  }
+  
+  /* Large (lg) */
+  @media (min-width: 1024px) {
+    font-size: 95px;
+  }
+  
+  /* Extra Large (xl) */
+  @media (min-width: 1280px) {
+    font-size: var(--font-hero-size);
+  }
+}
+
+.kl-font-fluid-weight {
+  font-weight: var(--font-body-weight);
+
+  @media (max-width: 640px) {
+    font-weight: var(--font-heading-weight);
+  }
+}

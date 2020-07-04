@@ -1,0 +1,114 @@
+<section class="py-10 sm:py-20">
+  <!-- desktop -->
+  <div class="container px-5 md:px-0 sm:mx-auto">
+    {% render 'text-heading' with h_type: 'h2', text: section.settings.heading, icon: section.settings.heading_decoration %}
+    <div class="hidden sm:block">
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 lg:gap-20 ">
+        {% for block in section.blocks %}
+        {% render 'card-product' with text: block.settings.excerpt, product: block.settings.product %}
+        {% endfor %}
+      </div>
+    </div>
+    <!-- mobile -->
+    <div class="sm:hidden">
+      <div class="grid grid-cols-2 kl-button-group kl-button-border kl-button-height kl-button-rounded kl-color-button-alt mb-6">
+        {% for block in section.blocks %}
+          {% if forloop.index == 1 %}
+            {% assign active = 'active' %}
+          {% else %}
+            {% assign active = '' %}
+          {% endif %}
+         {% render 'button-part-group' with text: all_products[block.settings.product].title, handle: all_products[block.settings.product].handle, active: active %}
+        {% endfor %}
+      </div>
+      {% for block in section.blocks %}
+        {% if forloop.index == 1 %}
+          {% assign active = 'active' %}
+        {% else %}
+          {% assign active = 'non-active' %}
+        {% endif %}
+        {% render 'card-product' with text: block.settings.excerpt, product: block.settings.product, toggle: true, active: active %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+  $(document).ready(function() {
+    var $allProduct = $('.js-product');
+    console.log('allProduct', $allProduct)
+    $('.js-show-product').on('click', function(){
+      $('.js-show-product').removeClass('active')
+      $(this).addClass('active')
+      console.log('js-show-product', $(this).attr('data'));
+      // this.data();
+      var selected = $(this).attr('data');
+      $allProduct.each(function(i, el){
+        console.log('($(el).attr(data)', ($(el).attr('data')) )
+        if($(el).attr('data') === selected ) {
+          $(el).show();
+        }else {
+          $(el).hide();
+        }
+      })
+      
+    })
+
+  })
+})
+</script>
+
+
+
+<style>
+  .kl-button-border {
+    border: 2px solid;
+    border-color: var(--color-heading-text);
+  }
+</style>
+{% schema %}
+  {
+    "name": "Prodcut thumbnails",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product Thumbnail"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "heading_decoration",
+        "label": "Decoration"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add Product Thumbnail",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "excerpt",
+            "label": "Product Excerpt"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Prodect thumbnails",
+        "category": "Grid"
+      }
+    ]
+  }
+{% endschema %}

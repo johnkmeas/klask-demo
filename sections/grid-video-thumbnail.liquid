@@ -1,0 +1,88 @@
+<section class="pb-3 sm:pb-5 pt-10 sm:pt-20">
+  <div class="container px-5 sm:mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <div class="col-span-1 lg:col-span-8 lg:col-start-3">
+        {% render 'text-heading' with h_type: 'h1', text: section.settings.heading, icon: section.settings.heading_decoration %}
+        {% render 'text-paragraph' with size: 'large', align: 'center', text: section.settings.content %}
+      </div>
+    </div>
+    <!-- compensate for absolute image overlapping -->
+    <div class="pt-16 md:pt-20 lg:pt-8">
+      <!-- desktop -->
+      <div class="hidden lg:block">
+        <div class="grid grid-cols-2 gap-5">
+          {% for block in section.blocks %}
+          {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index %}
+          {% endfor %}
+        </div>
+      </div>
+      <!-- mobile -->
+      <div class="lg:hidden block">
+        <div class="grid grid-cols-2 gap-3">
+          {% for block in section.blocks %}
+          {% render 'card-video' with text: block.settings.heading_thumbnail, image: block.settings.image_thumbnail, index: forloop.index, screen: 'mobile' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.kl-play-arrow-white:after {
+  content: "";
+  background: url({{ 'icon-play-video.svg' | asset_url }}) no-repeat;
+  background-size: contain !important;
+  display: inline-block;
+  position: absolute;
+}
+</style>
+{% schema %}
+  {
+    "name": "Video thumbnails",
+    "settings": [
+      {
+        "type": "header",
+        "content": "video Thumbnail"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "heading_decoration",
+        "label": "Decoration"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add Video Thumbnail",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_thumbnail",
+            "label": "Image Video"
+          },
+          {
+            "type": "text",
+            "id": "heading_thumbnail",
+            "label": "heading"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Video thumbnails",
+        "category": "Grid"
+      }
+    ]
+  }
+{% endschema %}

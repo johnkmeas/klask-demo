@@ -1,0 +1,54 @@
+{% if screen == 'mobile' %}
+  <!-- mobile up to md -->
+  <div class="grid grid-cols-1 gap-4 px-4 pb-4 kl-bg-alt kl-card-rounded">
+    <div class="col-span-1 text-center">
+      <div class="kl-thumbnail-video kl-thumbnail-video-{{index}} kl-play-arrow-white cursor-pointer" >
+      </div>
+    </div>
+    <div class="col-span-1 text-center">
+      <p class="kl-font-header kl-font-header-weight kl-font-body-video-size kl-color-heading kl-font-body-video-line-height">
+        {{ text }}
+      </p>
+    </div>
+  </div>
+{% else %}
+  <!-- desktop lg+ -->
+  <div class="grid grid-cols-5 gap-6 lg:p-6 xl:p-10 kl-bg-alt kl-card-rounded items-center">
+    <div class="col-span-2 sm:order-last kl-thumbnail-video kl-thumbnail-video-{{index}} lg:pr-3 xl:pr-5 kl-play-arrow-white cursor-pointer">
+    </div>
+    <p class="col-span-3 kl-font-header kl-font-header-weight kl-font-body-video-size kl-color-heading kl-font-body-video-line-height lg:pr-6 xl:pr-6">
+      {{ text }}
+    </p>
+  </div>
+{% endif %}
+<style>
+  .kl-thumbnail-video-{{index}}::before {
+    background: url({{ image.src | img_url: 'x123' }}) no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: 640px) {
+    .kl-thumbnail-video-{{index}}::before {
+      background: url({{ image.src | img_url: 'x150' }}) no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .kl-thumbnail-video-{{index}}::before {
+      background: url({{ image.src | img_url: 'x246' }}) no-repeat;
+      background-size: contain;
+    }
+  }
+
+
+  /* .kl-icon-volt::after {
+    content: "";
+    background: url({{ 'icon-volt.svg' | asset_url }}) no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: scaleX(-1);
+  }
+  <img class="rounded-full" src="{{ image.src | img_url: 'x246' }} " alt=""> */
+</style>

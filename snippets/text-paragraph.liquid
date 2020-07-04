@@ -1,0 +1,42 @@
+{% comment %} Font Size {% endcomment %}
+{% if size == 'body' %}
+  {% assign text_size = 'kl-font-body-size' %}
+{% elsif size == 'medium' %}
+  {% assign text_size = 'kl-font-body-medium-size' %}
+{% elsif size == 'product' %}
+  {% assign text_size = 'kl-font-body-product-size' %}
+{% elsif size == 'large' %}
+  {% assign text_size = 'kl-font-body-large-size' %}
+{% elsif size == 'review' %}
+  {% assign text_size = 'kl-font-body-review-size kl-font-header-weight' %}
+{% elsif size == 'tutorial' %}
+  {% assign text_size = 'kl-h4' %}
+{% endif %} 
+
+
+
+{% comment %} Text Align {% endcomment %}
+{% if align == 'center' %}
+  {% assign text_align = 'text-center' %}
+{% else %}
+  {% assign text_align = '' %}
+{% endif %}
+
+{% if color == 'light' %}
+  {% assign text_color = 'kl-color-light' %}
+{% elsif color == 'kl-color-body-blue' %}
+  {% assign text_color = 'kl-color-body-blue' %}
+{% else %}
+  {% assign text_color = 'kl-color-body' %}
+{% endif %}
+
+{% if padding == 'none' %}
+  {% assign text_padding = '' %}
+{% else %}
+  {% assign text_padding = 'mb-6' %}
+{% endif %}
+
+<!-- {{ text_size }} -->
+<p class="kl-font-body {{ text_color }} {{ text_padding }} {{ text_size }} {{ text_align }} {{ custom_class }}">
+ {{ text }}
+</p>

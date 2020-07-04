@@ -1,0 +1,46 @@
+.kl-bg-white,
+.kl-bg-main {
+  background-color: var(--color-main-background);
+}
+
+.kl-bg-off-white,
+.kl-bg-alt {
+  background-color: var(--color-body-bg-alt);
+}
+
+.kl-bg-review {
+  background-color: #F3F3F6;
+
+  @media (min-width: 640px) {
+    background-color: var(--color-body-bg-alt);
+  }
+}
+
+.kl-bg-blue,
+.kl-bg-dark {
+  background-color: var(--color-body-bg-dark);
+}
+
+.kl-border-color {
+  border-color: var(--color-body_borders);
+}
+
+.kl-bg-yellow {
+  background-color: var(--color-button-alt);
+}
+
+.kl-shadow {
+  box-shadow: 0px 0px 9px 0px #00000029;
+}
+
+.kl-nav-sublink {
+  display: none;
+}
+
+.kl-hover-sublink {
+  &:hover {
+    .kl-nav-sublink {
+      display: block;
+    }
+  }
+}

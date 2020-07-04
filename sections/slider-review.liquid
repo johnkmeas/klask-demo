@@ -1,0 +1,145 @@
+<section class="kl-bg-review py-10 sm:py-20">
+  <!-- Slide content-->
+  <div class="container px-5 sm:mx-auto">
+    <div class="px-4 sm:px-0 sm:grid sm:grid-cols-1 sm:grid-cols-12 sm:pb-10">
+      <div class="sm:col-start-2 sm:col-span-10">
+        <ul class="slick-review-content">
+          {% for block in section.blocks %}
+            <li class="">
+              {% render 'text-paragraph' with size: 'review', align: 'center', text: block.settings.review_body %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+  </div>
+  <!-- Slide nav-->
+  <ul class="slick-review-nav container mx-auto sm:px-16">
+    {% for block in section.blocks %}
+      <li class="cursor-pointer text-center">
+        <img src="{{ block.settings.logo_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.logo_thumbnail.alt }}" class="px-5 mx-auto">
+        <span class="kl-line-dash"></span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<style>
+  .slick-review-content .slick-track {
+    align-items: center;
+    display: flex;
+  }
+
+  .slick-review-nav .kl-line-dash::after {
+    background: url({{ 'icon-underline-dashed-mobile.svg' | asset_url }}) no-repeat;
+    background-size: contain !important;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    opacity: 0;
+    width: 87px;
+  }
+
+  .slick-review-nav .slick-current .kl-line-dash::after {
+    opacity: 1;
+  }
+
+  @media (min-width: 640px) {
+    .slick-review-nav .kl-line-dash::after {
+      background: url({{ 'icon-underline-dashed.svg' | asset_url }}) no-repeat;
+      background-size: contain !important;
+      content: "";
+      display: inline-block;
+      height: 4px;
+      opacity: 0;
+      width: 183px;
+    }
+  
+    .slick-review-nav .slick-current .kl-line-dash::after {
+      opacity: 1;
+    }
+  }
+
+</style>
+
+{% schema %}
+  {
+    "name": "Review Slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Reviews"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add Review",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo_thumbnail",
+            "label": "Review Logo"
+          },
+          {
+            "type": "textarea",
+            "id": "review_body",
+            "label": "Review Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Review Slider",
+        "category": "Slider"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+  $(document).ready(function() {
+
+
+   $('.slick-review-content').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: false,
+      arrows: true,
+      fade: true,
+      infinite: true,
+      asNavFor: '.slick-review-nav',
+      responsive: [{
+        breakpoint: 640,
+        settings: {
+          draggable: true
+        },
+      }]
+    });
+
+    $('.slick-review-nav').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.slick-review-content',
+      dots: false,
+      focusOnSelect: true,
+      infinite: true,
+      responsive: [{
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 3,
+          dots: false,
+          arrows: false,
+        },
+      }]
+    });
+
+  });
+});
+</script>

@@ -106,7 +106,7 @@
       },
       {
         "type": "color",
-        "id": "color_button_text",
+        "id": "color_button_text_alt",
         "label": {
           "en": "Alternate labels"
         },
@@ -302,7 +302,59 @@
           { "value": "bold", "label": "bold" }
         ],
         "default":   "bold"
-     }
+     },
+     {
+        "type": "header",
+        "content": {
+          "en": "Hero text"
+        }
+      },
+      {
+        "type": "font_picker",
+        "id": "hero_font",
+        "label": {
+          "en": "Hero Font"
+        },
+        "default": "dosis_n4"
+      },
+      {
+        "type": "range",
+        "id": "hero_font_size",
+        "label": {
+          "en": "hero font size"
+        },
+        "default": 108,
+        "min": 32,
+        "max": 108,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "header",
+        "content": {
+          "en": "Button text"
+        }
+      },
+      {
+        "type": "font_picker",
+        "id": "button_font",
+        "label": {
+          "en": "Button Font"
+        },
+        "default": "dosis_n4"
+      },
+      {
+        "type": "range",
+        "id": "button_font_size",
+        "label": {
+          "en": "button font size"
+        },
+        "default": 20,
+        "min": 18,
+        "max": 32,
+        "step": 1,
+        "unit": "px"
+      }
     ]
   },
   {

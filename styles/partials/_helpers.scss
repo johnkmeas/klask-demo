@@ -1,0 +1,53 @@
+.kl-nav-height {
+  height: 82px;
+}
+
+.kl-card-testimony-rounded {
+  border-radius: 5px;
+}
+
+.kl-card-rounded {
+  border-radius: 10px;
+}
+
+.kl-card-rounded-sm {
+  @media (min-width: 641px) {
+    border-radius: 10px;
+  }
+}
+
+.kl-tutorial-left-rounded {
+  @media (min-width: 640px) {
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.kl-tutorial-right-rounded {
+  border-radius: 0 10px 10px 0;
+}
+
+.kl-border {
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-body_borders);
+}
+
+@media (min-width: 640px) {
+  .kl-border-product {
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color-body_borders);
+  }
+}
+
+.kl-rotate-svg-180 {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.kl-icon-mx-auto-child {
+  > * {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,25 @@
+{% if color == 'yellow' %}
+  {% assign bg = 'kl-bg-button-alt' %}
+  {% assign text_color =  'kl-color-button-alt' %}
+{% elsif color == 'blue' %}
+  {% assign bg = 'kl-bg-button' %}
+  {% assign text_color = 'kl-color-button' %}
+{% elsif color == 'white' %}
+  {% assign bg = 'kl-bg-white' %}
+  {% assign text_color = 'kl-color-button-alt' %}
+{% endif %}
+
+{% if type == 'video' %}
+  {% assign data_fancybox = 'data-fancybox' %}
+{% endif %}
+<a href="{{ url }}" class="{{ bg }} kl-button-height kl-button-rounded {{ custom_class }} {{ span }}">
+
+  <span class="kl-h4 kl-font-header {{ text_color }} flex flex-row items-center justify-center h-full text-center kl-font-button-weight">
+    {% if type == 'video' %}
+      <span class="pr-4">
+        {% render 'icon-play-blue-single-svg' %}
+      </span>
+    {% endif %}
+    {{ text }}
+  </span>
+</a>

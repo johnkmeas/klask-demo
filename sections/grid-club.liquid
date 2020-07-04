@@ -1,0 +1,168 @@
+<section class="py-10 sm:py-20">
+  <div class="container px-5 sm:mx-auto">
+    {% render 'text-heading' with h_type: 'h2', text: section.settings.heading, icon: section.settings.heading_decoration %}
+    <!-- Mobile -->
+    <ul class="block sm:hidden grid grid-cols-2 gap-4">
+      {% for block in section.blocks %}
+        <li class="">
+          <img src="{{ block.settings.club_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.club_thumbnail.alt }}" class="script">
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- Desktop -->
+  <ul class="hidden sm:block slick-club kl-club-slick">
+    {% for block in section.blocks %}
+      <li class="">
+        <img src="{{ block.settings.club_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.club_thumbnail.alt }}" class="script">
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- subscribe -->
+  <div class="container px-5 sm:mx-auto pt-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-24">
+      <div class="col-span-1 sm:col-span-4 sm:col-start-0 md:col-span-6 md:col-start-0 md:pb-8 lg:col-span-5 lg:col-start-2 pb-10 lg:pb-8 lg:pb-0">
+        <h4 class="kl-h2 kl-font-header kl-font-header-weight kl-color-heading pb-5 sm:pb-4 uppercase sm:normal-case">
+          <span class="block text-center sm:text-left">
+            {{ section.settings.heading_subscribe }}
+          </span>
+        </h4>
+        <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="contact-form" novalidate="novalidate">
+          <input type="hidden" name="form_type" value="customer">
+          <input type="hidden" name="utf8" value="✓">
+
+          <div class="grid grid-cols-3 kl-button-height kl-border kl-button-rounded kl-border-submit mb-4">
+            <input placeholder="{{ section.settings.subscribe_placeholder }}" type="email" name="contact[email]" id="ContactFooter-email"
+               class="col-span-2 kl-font-body kl-color-body kl-h4 kl-font-body-weight px-5 kl-input-placeholder-color" value="" placeholder="Email address" aria-label="Email address" aria-required="true" required="" autocorrect="off" autocapitalize="off">
+            <span class="col-span-1">
+              <button type="submit" class="kl-bg-button h-full w-full" name="commit">
+                <span class="kl-h4 kl-font-header kl-color-button flex flex-col justify-center h-full text-center kl-font-button-weight">Subscribe</span>
+              </button>
+            </span>
+          </div>
+          <div class="col-span-3 kl-font-body kl-font-header kl-font-header-weight text-center sm:text-left sm:px-0 opacity-50">
+            <span>
+              {{ section.settings.subscribe_footer }}
+            </span>
+          </div>
+        </form>
+      </div>
+      <div class="col-span-1 md:col-span-6">
+        <div class="">
+          <h4 class="kl-h2 kl-font-header kl-font-header-weight kl-color-heading md:pb-4">
+            <span class="block hidden md:block">
+              {{ section.settings.heading_follow }}
+            </span>
+          </h4>
+          <div class="flex flex-row flex-wrap justify-between md:justify-start">
+            <span class="cursor-pointer kl-icon-mx-auto-child md:pr-4 lg:pr-8">
+              {% render 'icon-facebook-svg' %}
+            </span>
+            <span class="cursor-pointer kl-icon-mx-auto-child md:pr-4 lg:pr-8">
+              {% render 'icon-instagram-svg' %}
+            </span>
+            <span class="cursor-pointer kl-icon-mx-auto-child md:pr-4 lg:pr-8">
+              {% render 'icon-twitter-svg' %}
+            </span>
+            <span class="cursor-pointer kl-icon-mx-auto-child md:pr-4 lg:pr-8">
+              {% render 'icon-youtube-svg' %}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Club Thumbnails",
+    "settings": [
+      {
+        "type": "header",
+        "content": "clubs"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "heading_decoration",
+        "label": "Decoration"
+      },
+      {
+        "type": "header",
+        "content": "Subscribe and Follow"
+      },
+      {
+        "type": "text",
+        "id": "heading_subscribe",
+        "label": "Subscribe Heading"
+      },
+      {
+        "type": "text",
+        "id": "subscribe_placeholder",
+        "label": "Place Holder text for email subscribe"
+      },
+      {
+        "type": "text",
+        "id": "subscribe_footer",
+        "label": "Subscribe footer note"
+      },
+      {
+        "type": "text",
+        "id": "heading_follow",
+        "label": "Follow Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "select",
+        "name": "Add ClubThumbnail",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "club_thumbnail",
+            "label": "Club Award"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Club Thumbnails",
+        "category": "Grid"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+  $(document).ready(function() {
+
+    $('.slick-club').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      initialSlide: 1,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 5,
+            dots: false
+          }
+        }
+      ]
+    })
+  });
+});
+</script>

@@ -7,8 +7,10 @@
     "color_topper_text": "#ffd40e",
     "color_light_text": "#ffffff",
     "color_accent-text": "#ffd40e",
-    "color_button": "#0a00a3",
-    "color_button_text": "#ffffff",
+    "color_button_primary": "#0a00a3",
+    "color_button_text_primary": "#ffffff",
+    "color_button_alt": "#ffd40e",
+    "color_button_text_alt": "#0a00a3",
     "color_text_field_text": "#0a00a3",
     "color_text_field_border": "#0a00a3",
     "color_bg_main": "#ffffff",
@@ -16,14 +18,19 @@
     "color_body_bg_dark": "#0a00a3",
     "color_body_borders": "#f4f3ff",
     "header_font": "dosis_n6",
-    "heading_font_weight": "semibold",
     "header_font_size_h1": 48,
     "header_font_size_h2": 32,
     "header_font_size_h3": 26,
     "header_font_size_h4": 20,
     "body_font": "dosis_n5",
-    "body_font_weight": "medium",
-    "body_font_size": 15,
+    "body_font_size": 18,
+    "footer_font_size": 14,
+    "link_font_size": 20,
+    "button_weight": "bold",
+    "hero_font": "dosis_n3",
+    "hero_font_size": 108,
+    "button_font": "dosis_n7",
+    "button_font_size": 20,
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
@@ -55,6 +62,10 @@
     "checkout_accent_color": "#197bbd",
     "checkout_button_color": "#197bbd",
     "checkout_error_color": "#e32c2b",
+    "color_button_text": "#0a00a3",
+    "color_button": "#0a00a3",
+    "heading_font_weight": "semibold",
+    "body_font_weight": "medium",
     "color_text": "#3a3a3a",
     "color_sale_text": "#ea0606",
     "color_small_button_text_border": "#3a3a3a",
@@ -68,6 +79,364 @@
     "type_header_base_size": 26,
     "type_base_font": "dosis_n4",
     "type_base_size": 15,
-    "content_for_index": []
+    "sections": {
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "hero_image": "shopify:\/\/shop_images\/hero_2x-min_3f543663-623e-43a1-85c6-06962d325934.jpeg",
+          "hero_image_mobile": "shopify:\/\/shop_images\/hero-mobile_2x-min.jpeg",
+          "hero_text": "PLAY LIKE A VIKING",
+          "button_text": "BUY THE GAME",
+          "button_url": "shopify:\/\/products\/klask-4"
+        }
+      },
+      "1593400511952": {
+        "type": "hero",
+        "settings": {
+          "hero_image": "shopify:\/\/shop_images\/hero_2x-min.jpeg",
+          "hero_image_mobile": "shopify:\/\/shop_images\/hero-mobile_2x-min.jpeg",
+          "hero_text": "PLAY LIKE A VIKING",
+          "button_text": "BUY THE GAME",
+          "button_url": "shopify:\/\/products\/klask"
+        }
+      },
+      "1593400563872": {
+        "type": "grid-video-thumbnail",
+        "blocks": {
+          "1593400628805": {
+            "type": "select",
+            "settings": {
+              "image_thumbnail": "shopify:\/\/shop_images\/thumbnail-video_2x-min.png",
+              "heading_thumbnail": "It's the #1 Party Game from Denmark!"
+            }
+          },
+          "1593400671233": {
+            "type": "select",
+            "settings": {
+              "image_thumbnail": "shopify:\/\/shop_images\/thumbnail-video-2_2x_1-min.png",
+              "heading_thumbnail": "It's a Sport on your kitchen table!"
+            }
+          }
+        },
+        "block_order": [
+          "1593400628805",
+          "1593400671233"
+        ],
+        "settings": {
+          "heading": "WHAT IS KLASK",
+          "heading_decoration": false,
+          "content": "A popular pub game in Denmark, Klask is like a fast-paced table-top version of Air Hockey, only it uses multiple magnets and a small round ball. Players must use the magnetic handles under the board to control their playing pieces on top of the"
+        }
+      },
+      "1593407262262": {
+        "type": "grid-product",
+        "blocks": {
+          "1593407283084": {
+            "type": "select",
+            "settings": {
+              "product": "klask",
+              "excerpt": "The Original, Head-to-Head Battle for 2 Players"
+            }
+          },
+          "1593407303956": {
+            "type": "select",
+            "settings": {
+              "product": "klask-4",
+              "excerpt": "All-New Circle Board for Chaotic Fun with 4 Players"
+            }
+          }
+        },
+        "block_order": [
+          "1593407283084",
+          "1593407303956"
+        ],
+        "settings": {
+          "heading": "DODGE SCORE",
+          "heading_decoration": true
+        }
+      },
+      "1593472795913": {
+        "type": "grid-testimonial",
+        "blocks": {
+          "1593473000868": {
+            "type": "select",
+            "settings": {
+              "heading_testimony": "Fun & Only Fun !",
+              "body_testimony": "Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored.",
+              "name_testimony": "Ashley"
+            }
+          },
+          "1593473118173": {
+            "type": "select",
+            "settings": {
+              "heading_testimony": "Entertaining",
+              "body_testimony": "Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored.",
+              "name_testimony": "Erin"
+            }
+          },
+          "1593473145864": {
+            "type": "select",
+            "settings": {
+              "heading_testimony": "Best Game!",
+              "body_testimony": "Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game. I play with my kids, husband and friends.",
+              "name_testimony": "Umyr"
+            }
+          },
+          "1593473166182": {
+            "type": "select",
+            "settings": {
+              "heading_testimony": "Good Times!",
+              "body_testimony": "Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored.",
+              "name_testimony": "Alisha"
+            }
+          },
+          "1593473189153": {
+            "type": "select",
+            "settings": {
+              "heading_testimony": "Love this!",
+              "body_testimony": "Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game. I play with my kids, husband and friends.",
+              "name_testimony": "Jerry"
+            }
+          },
+          "1593843902147": {
+            "type": "select",
+            "settings": {
+              "heading_testimony": "Super Cool",
+              "body_testimony": "Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored.",
+              "name_testimony": "Dude"
+            }
+          },
+          "1593843918625": {
+            "type": "select",
+            "settings": {
+              "heading_testimony": "Mind Blown",
+              "body_testimony": "I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game. I play with my kids, husband and friends. I totally rocks your time and you never get bored. Absolutely LOVE the game.",
+              "name_testimony": "Sue"
+            }
+          }
+        },
+        "block_order": [
+          "1593473000868",
+          "1593473118173",
+          "1593473145864",
+          "1593473166182",
+          "1593473189153",
+          "1593843902147",
+          "1593843918625"
+        ],
+        "settings": {
+          "heading": "Fun! Fun! and Fun! That's only what we hear about KLASK!",
+          "heading_mobile": "TESTIMONIALS"
+        }
+      },
+      "1593552161623": {
+        "type": "grid-awards",
+        "blocks": {
+          "1593552210008": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/Arets_2x-min.png"
+            }
+          },
+          "1593552602522": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/Bettspilluguiden_2x-min.png"
+            }
+          },
+          "1593552634770": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/Gulbrikken_2x-min.png"
+            }
+          },
+          "1593552665152": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/Spiel_2x-min.png"
+            }
+          },
+          "1593552685913": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/The-Dice_2x-min.png"
+            }
+          },
+          "1593552704783": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/Toty_2x-min.png"
+            }
+          },
+          "1593552716978": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/Vuoden_2x-min.png"
+            }
+          },
+          "1593552650277": {
+            "type": "select",
+            "settings": {
+              "award_thumbnail": "shopify:\/\/shop_images\/More-Awards-Comming_2x-min.png"
+            }
+          }
+        },
+        "block_order": [
+          "1593552210008",
+          "1593552602522",
+          "1593552634770",
+          "1593552665152",
+          "1593552685913",
+          "1593552704783",
+          "1593552716978",
+          "1593552650277"
+        ],
+        "settings": {
+          "heading": "Klask Awards",
+          "desktop_slider": false
+        }
+      },
+      "1593555415754": {
+        "type": "grid-club",
+        "blocks": {
+          "1593555435106": {
+            "type": "select",
+            "settings": {
+              "club_thumbnail": "shopify:\/\/shop_images\/thumbnail-club-1-min.jpeg"
+            }
+          },
+          "1593555681783": {
+            "type": "select",
+            "settings": {
+              "club_thumbnail": "shopify:\/\/shop_images\/thumbnail-club-2-min.jpeg"
+            }
+          },
+          "1593555684544": {
+            "type": "select",
+            "settings": {
+              "club_thumbnail": "shopify:\/\/shop_images\/thumbnail-club-3-min.jpeg"
+            }
+          },
+          "1593555689537": {
+            "type": "select",
+            "settings": {
+              "club_thumbnail": "shopify:\/\/shop_images\/thumbnail-club-4-min.jpeg"
+            }
+          },
+          "1593555692235": {
+            "type": "select",
+            "settings": {
+              "club_thumbnail": "shopify:\/\/shop_images\/thumbnail-club-5-min.jpeg"
+            }
+          },
+          "1593555699111": {
+            "type": "select",
+            "settings": {
+              "club_thumbnail": "shopify:\/\/shop_images\/thumbnail-club-6-min.jpeg"
+            }
+          }
+        },
+        "block_order": [
+          "1593555435106",
+          "1593555681783",
+          "1593555684544",
+          "1593555689537",
+          "1593555692235",
+          "1593555699111"
+        ],
+        "settings": {
+          "heading": "JOIN THE CLUB",
+          "heading_decoration": true,
+          "heading_subscribe": "Never miss an update",
+          "subscribe_placeholder": "Enter your email here",
+          "subscribe_footer": "You will only get weekly updates and you can subscribe any time you want.",
+          "heading_follow": "Follow Klask"
+        }
+      },
+      "1593577152590": {
+        "type": "slider-review",
+        "blocks": {
+          "1593577217496": {
+            "type": "select",
+            "settings": {
+              "logo_thumbnail": "shopify:\/\/shop_images\/logo-gizmodo-min.png",
+              "review_body": "\"Klask is kind of like the lovechild of table football and air hockey. It's a magnetic ball game where you control your little dude with a magnet from underneath, trying to get the ball into your opponent's goal without hitting any of the white bits in the middle. That's it really. It is FIERCELY addictive and possibly even more fun when tipsy. \""
+            }
+          },
+          "1593577224202": {
+            "type": "select",
+            "settings": {
+              "logo_thumbnail": "shopify:\/\/shop_images\/logo-thrillist-min.png",
+              "review_body": "\"That's it really. It is FIERCELY addictive and possibly even more fun when tipsy. Klask is kind of like the lovechild of table football and air hockey. It's a magnetic ball game where you control your little dude with a magnet from underneath, trying to get the ball into your opponent's goal without hitting any of the white bits in the middle. \""
+            }
+          },
+          "1593577213982": {
+            "type": "select",
+            "settings": {
+              "logo_thumbnail": "shopify:\/\/shop_images\/logo-game-informer-min.png",
+              "review_body": "\"It's a magnetic ball game where you control your little dude with a magnet from underneath, trying to get the ball into your opponent's goal without hitting any of the white bits in the middle. Klask is kind of like the lovechild of table football and air hockey. That's it really. It is FIERCELY addictive and possibly even more fun when tipsy. \""
+            }
+          },
+          "1593577221148": {
+            "type": "select",
+            "settings": {
+              "logo_thumbnail": "shopify:\/\/shop_images\/logo-lad-bible-min.png",
+              "review_body": "\"It is FIERCELY addictive and possibly even more fun when tipsy. Klask is kind of like the lovechild of table football and air hockey. It's a magnetic ball game where you control your little dude with a magnet from underneath, trying to get the ball into your opponent's goal without hitting any of the white bits in the middle. That's it really. \""
+            }
+          },
+          "1593577195635": {
+            "type": "select",
+            "settings": {
+              "logo_thumbnail": "shopify:\/\/shop_images\/logo-forbes-min.png",
+              "review_body": "\"Klask is kind of like the lovechild of table football and air hockey. It's a magnetic ball game where you control your little dude with a magnet from underneath, trying to get the ball into your opponent's goal without hitting any of the white bits in the middle. That's it really. It is FIERCELY addictive and possibly even more fun when tipsy. \""
+            }
+          }
+        },
+        "block_order": [
+          "1593577217496",
+          "1593577224202",
+          "1593577213982",
+          "1593577221148",
+          "1593577195635"
+        ],
+        "settings": {
+          "heading": ""
+        }
+      },
+      "1593586188353": {
+        "type": "shout-out-tutorial",
+        "settings": {
+          "heading": "HOW TO PLAY",
+          "content": "Using the magnetic handles to steer their striker, players hit the orange ball around the field. Players are free to move continuously all over the field and there is no taking turns. The aim is to score points by shooting the orange ball into the opponent’s ‘goal’. But be careful not to lose control of...",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=2VB68KfqO5o&list=PLeN3eS6Ym2Kk4OkhJbxhSV6zyUDKqd-uI",
+          "video_play_text": "WATCH THE VIDEO",
+          "video_thumbnail": "shopify:\/\/shop_images\/how-to_2x_jpeg.jpg",
+          "cta_1_text": "interesting! tell me more…",
+          "call_1_url": "shopify:\/\/products\/klask",
+          "cta_2_text": "<p>Or watch how to play <strong>klask 4<\/strong><\/p>",
+          "call_2_url": "https:\/\/www.youtube.com\/watch?v=2VB68KfqO5o&list=PLeN3eS6Ym2Kk4OkhJbxhSV6zyUDKqd-uI"
+        }
+      },
+      "1593643766732": {
+        "type": "power-call-to-action",
+        "settings": {
+          "heading": "SEE IT IN ACTION!",
+          "sub_heading": "You'll love it too!",
+          "video_url": "https:\/\/youtu.be\/Rqf7gIjxNXA",
+          "custom_thumbnail": "shopify:\/\/shop_images\/person-having-fun_2x-min.jpeg"
+        }
+      }
+    },
+    "content_for_index": [
+      "1593400511952",
+      "1593400563872",
+      "1593407262262",
+      "1593586188353",
+      "1593472795913",
+      "1593552161623",
+      "1593643766732",
+      "1593577152590",
+      "1593555415754"
+    ]
   }
 }
