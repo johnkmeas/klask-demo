@@ -1,13 +1,16 @@
-<section class="kl-bg-off-white py-10 pb-16 sm:py-20">
+<section class="kl-bg-off-white py-10 sm:py-20">
   <!-- Slide content-->
   <div class="container px-4 sm:mx-auto pb-2 sm:pb-5">
-    <ul class="slick-review-content">
-      {% for block in section.blocks %}
-        <li class="">
-          {% render 'text-paragraph' with size: 'review', align: 'center', text: block.settings.review_body %}
-        </li>
-      {% endfor %}
-    </ul>
+    <div class="sm:grid sm:grid-cols-1 sm:grid-cols-12 sm:pb-10">
+      <div class="sm:col-start-2 sm:col-span-10">
+        <ul class="slick-review-content">
+          {% for block in section.blocks %}
+            <li class="">
+              {% render 'text-paragraph' with size: 'review', align: 'center', text: block.settings.review_body %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
   </div>
   <!-- Slide nav-->
   <ul class="slick-review-nav container mx-auto">
@@ -20,9 +23,9 @@
 </section>
 
 <style>
-  .kl-slick-nav-align-center {
-    display: flex;
+  .slick-review-content .slick-track {
     align-items: center;
+    display: flex;
   }
 </style>
 

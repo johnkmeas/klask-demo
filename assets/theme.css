@@ -14656,8 +14656,8 @@ video {
   padding-bottom: 25px; }
 
 .slick-review-nav .slick-current:after {
-  background-image: linear-gradient(to right, transparent 50%, #0a00a3 50%);
-  background-size: 25px 100%;
+  background-image: linear-gradient(to right, transparent 30%, #0a00a3 30%);
+  background-size: 20px 100%;
   content: "";
   height: 3px;
   margin-top: 20px;
