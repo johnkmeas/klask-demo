@@ -12,7 +12,7 @@
 <section class="sm:hidden kl-hero-height kl-bg-alt bg-cover bg-center" style="background-image: url({{ section.settings.hero_image_mobile.src | img_url: 'master' }})">
   <div class="container px-5 sm:mx-auto flex flex-col justify-center h-full">
     <div class="grid grid-cols-12 row-gap-3">
-      <span class="col-span-12 kl-font-header kl-font-hero-size kl-color-light kl-font-hero-weight kl-font-hero-line-height text-center">
+      <span class="col-span-10 col-start-2 kl-font-header kl-font-hero-size kl-color-light kl-font-hero-weight kl-font-hero-line-height text-center">
         {{ section.settings.hero_text }}
       </span>
       {% render 'button' with text: section.settings.button_text, span: 'col-span-8 col-start-3', url: section.settings.button_url, color: 'yellow' %}
