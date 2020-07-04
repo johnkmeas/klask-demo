@@ -21,6 +21,27 @@
   }
 }
 
+@media (max-width: 640px) {
+  .kl-main-nav,
+  .kl-main-nav.kl-hidden-nav {
+    transform: translateX(640px);
+    transition: transform 300ms ease-in-out;
+  }
+
+  .kl-main-nav.kl-block-nav {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+  }
+
+  .kl-nav-active-body-lock {
+    overflow: hidden;
+  }
+}
+
+.kl-topper-letter-spacing {
+  letter-spacing: 0.35rem;
+}
+
 .kl-nav-sublink-mt {
   margin-top: 4.8rem;
 }
