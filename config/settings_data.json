@@ -1,7 +1,7 @@
 {
   "current": {
     "color_heading_text": "#0a00a3",
-    "color_body_text": "#333232",
+    "color_body_text": "#323232",
     "color_header_nav_text": "#0a00a3",
     "color_footer_nav_text": "#323232",
     "color_topper_text": "#ffd40e",
@@ -46,7 +46,7 @@
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
-    "favicon": "",
+    "favicon": "shopify:\/\/shop_images\/favicon_56d223ed-4779-453e-91de-d6021449517e.png",
     "enable_ajax": true,
     "checkout_header_image": "",
     "checkout_logo_image": "",
@@ -151,7 +151,7 @@
           "1593407303956"
         ],
         "settings": {
-          "heading": "DODGE SCORE",
+          "heading": "DODGE! SCORE!",
           "heading_decoration": true
         }
       },
