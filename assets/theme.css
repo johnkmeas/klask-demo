@@ -14844,6 +14844,9 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
   .slick-awards .slick-slide {
     margin: 0 10px; } }
 
+.kl-slide-arrow.slick-disabled svg {
+  opacity: 0.3; }
+
 /*
 .kl-club-slick {
   .slick-slide {

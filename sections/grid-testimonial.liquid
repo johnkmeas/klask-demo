@@ -28,9 +28,12 @@
       </li>
     {% endfor %}
   </ul>
-  <div class="container px-6 sm:mx-auto hidden sm:block">
-    <span class="js-slide-arrow-prev kl-slide-arrow-prev">
-      {% render 'icon-arrow-slider' %}
+  <div class="container px-6 sm:mx-auto hidden sm:block pt-6">
+    <span class="js-slide-arrow-prev kl-slide-arrow inline-block cursor-pointer">
+      {% render 'icon-arrow-left-svg' %}
+    </span>
+    <span class="js-slide-arrow-next kl-slide-arrow inline-block cursor-pointer">
+      {% render 'icon-arrow-right-svg' %}
     </span>
   </div>
 </section>

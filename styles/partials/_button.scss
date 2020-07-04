@@ -120,6 +120,14 @@ button.slick-arrow {
     }
   }
 }
+.kl-slide-arrow {
+  &.slick-disabled {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
 /*
 .kl-club-slick {
   .slick-slide {

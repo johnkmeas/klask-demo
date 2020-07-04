@@ -78,10 +78,17 @@ document.addEventListener('DOMContentLoaded', function(event) {
    $('.slick-review-content').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
+      draggable: false,
       arrows: true,
       fade: true,
       infinite: true,
-      asNavFor: '.slick-review-nav'
+      asNavFor: '.slick-review-nav',
+      responsive: [{
+        breakpoint: 640,
+        settings: {
+          draggable: true
+        },
+      }]
     });
 
     $('.slick-review-nav').slick({
