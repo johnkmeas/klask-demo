@@ -14444,6 +14444,10 @@ video {
 .kl-card-rounded {
   border-radius: 10px; }
 
+@media (min-width: 641px) {
+  .kl-card-rounded-sm {
+    border-radius: 10px; } }
+
 .kl-border {
   border-width: 5px;
   border-style: solid;
@@ -14455,7 +14459,7 @@ video {
     border-style: solid;
     border-color: var(--color-body_borders); } }
 
-@media (min-width: 641px) {
+@media (min-width: 640px) {
   .kl-tutorial-left-rounded {
     border-radius: 10px 0 0 10px; } }
 
