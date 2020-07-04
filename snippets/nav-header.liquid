@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-  <!-- mobile navbar header-->
+  <!-- mobile navbar -->
   <div class="block sm:hidden container px-4 md:px-0 sm:mx-auto">
     <div class="flex flex-row justify-between items-center py-1">
       <span class="js-open-mobile-nav cursor-pointer p-3 block">
@@ -31,17 +31,16 @@
       </span>
     </div>
   </div>
-  <!-- Desktop navbar  nav -->
+  <!-- Desktop navbar -->
   <nav class="kl-main-nav js-nav container kl-nav-container z-50 px-4 sm:px-0 sm:mx-auto fixed sm:relative kl-bg-white top-0">
     <div class=" hidden sm:block flex flex-col justify-between h-screen py-24 sm:py-0 sm:h-20">
       <ul class="grid grid-cols-7 h-full px-12 sm:px-0">
         {% for link in linklists.main-menu.links %}
-        
-        {% if forloop.index <= 3 %}
-          {% assign align_item = 'items-start' %}
-        {% elsif forloop.index > 3 %}
-          {% assign align_item = 'items-end' %}
-        {% endif %}
+          {% if forloop.index <= 3 %}
+            {% assign align_item = 'items-start' %}
+          {% elsif forloop.index > 3 %}
+            {% assign align_item = 'items-end' %}
+          {% endif %}
 
           {% if link.active %}
             {% assign link_active = 'active' %}
@@ -55,11 +54,8 @@
             {% assign has_sublink = '' %}
           {% endif %}
 
-
-
-
           <li class="relative flex flex-col justify-center {{ has_sublink }} items-center">
-            <a href="{{ link.url }}" class="kl-nav-item {{ link_active }} block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav relative">{{ link.title }}</a>
+            <a href="{{ link.url }}" class="kl-nav-item {{ link_active }} block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav relative py-5">{{ link.title }}</a>
             {% if link.links != blank %}
               <div class="absolute kl-nav-sublink kl-nav-sublink-mt kl-bg-white top-0 kl-shadow kl-card-rounded">
                 <div class="flex justify-center kl-top-triangle"></div>
@@ -73,6 +69,7 @@
               </div>
             {% endif %}
           </li>
+
           {% if forloop.index == 3 %}
             <li class="flex flex-col justify-center items-center ">
               {% render 'logo-klask-svg' %}
@@ -116,7 +113,6 @@
     .kl-main-nav.kl-hidden-nav {
       transform: translateX(640px);
       transition: transform 300ms ease-in-out;
-
     }
 
     .kl-main-nav.kl-block-nav {
@@ -147,7 +143,7 @@
     display: inline-block;
     height: 11px;
     left: 50%;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
     margin-left: -5px;
     position: absolute;
     width: 11px;
@@ -173,13 +169,12 @@
     background-size: contain !important;
     display: inline-block;
     height: 41px;
-    margin-top: -25px;
+    margin-top: -24px;
     position: absolute;
     width: 81px;
   }
-
-
 </style>
+
 <script>
   document.querySelector('.js-close-mobile-nav').addEventListener('click', function() {
     document.querySelector('.js-nav').classList.add("kl-hidden-nav");

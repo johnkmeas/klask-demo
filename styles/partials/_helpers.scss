@@ -15,6 +15,17 @@
     border-radius: 10px;
   }
 }
+
+.kl-tutorial-left-rounded {
+  @media (min-width: 640px) {
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.kl-tutorial-right-rounded {
+  border-radius: 0 10px 10px 0;
+}
+
 .kl-border {
   border-width: 5px;
   border-style: solid;
@@ -29,41 +40,14 @@
   }
 }
 
-.kl-tutorial-left-rounded {
-  @media (min-width: 640px) {
-    border-radius: 10px 0 0 10px;
-  }
-}
-
-.kl-tutorial-right-rounded {
-  border-radius: 0 10px 10px 0;
-}
-
 .kl-rotate-svg-180 {
   svg {
     transform: rotate(180deg);
   }
 }
 
-.container {
-  &.kl-nav-container {
-    @media (min-width: 640px) {
-      max-width: 720px;
-    }
-  
-    /* Medium (md) */
-    @media (min-width: 768px) {
-      max-width: 864px;
-    }
-    
-    /* Large (lg) */
-    @media (min-width: 1024px) {
-      max-width: 1152px;
-    }
-    
-    /* Extra Large (xl) */
-    @media (min-width: 1280px) {
-      max-width: 1440px;
-    }
+.kl-icon-mx-auto-child {
+  > * {
+    margin: 0 auto;
   }
 }

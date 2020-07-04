@@ -14432,9 +14432,6 @@ video {
 .delay-1000 {
   transition-delay: 1000ms; }
 
-.kl-nav-sublink-mt {
-  margin-top: 4.8rem; }
-
 .kl-nav-height {
   height: 82px; }
 
@@ -14448,6 +14445,13 @@ video {
   .kl-card-rounded-sm {
     border-radius: 10px; } }
 
+@media (min-width: 640px) {
+  .kl-tutorial-left-rounded {
+    border-radius: 10px 0 0 10px; } }
+
+.kl-tutorial-right-rounded {
+  border-radius: 0 10px 10px 0; }
+
 .kl-border {
   border-width: 5px;
   border-style: solid;
@@ -14459,15 +14463,11 @@ video {
     border-style: solid;
     border-color: var(--color-body_borders); } }
 
-@media (min-width: 640px) {
-  .kl-tutorial-left-rounded {
-    border-radius: 10px 0 0 10px; } }
-
-.kl-tutorial-right-rounded {
-  border-radius: 0 10px 10px 0; }
-
 .kl-rotate-svg-180 svg {
   transform: rotate(180deg); }
+
+.kl-icon-mx-auto-child > * {
+  margin: 0 auto; }
 
 .container.kl-nav-container {
   /* Medium (md) */
@@ -14485,6 +14485,12 @@ video {
   @media (min-width: 1280px) {
     .container.kl-nav-container {
       max-width: 1440px; } }
+
+.kl-nav-sublink-mt {
+  margin-top: 4.8rem; }
+
+.kl-nav-height {
+  height: 82px; }
 
 /* 
     --color-heading-text: #0a00a3;
@@ -14715,9 +14721,6 @@ video {
   @media (min-width: 641px) {
     .slick-review-nav .slick-current:after {
       margin-left: -10px; } }
-
-.kl-icon-mx-auto-child > * {
-  margin: 0 auto; }
 
 .kl-thumbnail-video {
   display: flex;
