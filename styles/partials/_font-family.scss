@@ -85,8 +85,44 @@
   font-weight: var(--font-heading-weight);
 }
 
+/* hero */
+.kl-font-hero-size {
+  font-size: 48px;
+
+  @media (min-width: 640px) {
+    font-size: 80px;
+  }
+
+  /* Medium (md) */
+  @media (min-width: 768px) {
+    font-size: 90px;
+  }
+  
+  /* Large (lg) */
+  @media (min-width: 1024px) {
+    font-size: 100px;
+  }
+  
+  /* Extra Large (xl) */
+  @media (min-width: 1280px) {
+    font-size: var(--font-hero-size);
+  }
+}
+
+.kl-font-hero-weight {
+  font-weight: var(--font-hero-weight);
+
+  @media (max-width: 640px) {
+    font-weight: var(--font-heading-weight);
+  }
+}
+
+.kl-font-hero-line-height {
+  line-height: 3.4rem;
+}
+
 .kl-font-shout-out-size {
-  font-size: 108px;
+  font-size: var(--font-hero-size);
 }
 
 .kl-font-shout-line-height {
@@ -117,10 +153,6 @@
 
 .kl-h4 {
   font-size: var(--font-heading-h4-size);
-}
-
-.hk-font-hero-size {
-  font-size: 108px;
 }
 
 .k1-font-header-product-size {
@@ -181,7 +213,7 @@
   
   /* Extra Large (xl) */
   @media (min-width: 1280px) {
-    font-size: 108px;
+    font-size: var(--font-hero-size);
   }
 }
 

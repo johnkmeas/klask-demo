@@ -1,10 +1,14 @@
 <style>
-  {{ settings.header_font | font_face }}
+  {%- assign font_body_light = settings.body_font | font_modify: 'weight', '300' -%}
+  {%- assign font_body_medium = settings.body_font | font_modify: 'weight', '500' -%}
+  {%- assign font_body_semibold = settings.body_font | font_modify: 'weight', '600' -%}
+  {%- assign font_body_bold = settings.body_font | font_modify: 'weight', '700' -%}
+
+  {{ font_body_light | font_face }}
   {{ settings.body_font | font_face }}
-  {%- assign font_body_bold = settings.body_font | font_modify: 'weight', 'bolder' -%}
-  {%- assign font_body_bold_italic = font_body_bold | font_modify: 'style', 'italic' -%}
+  {{ settings.header_font | font_face }}
   {{ font_body_bold | font_face }}
-  {{ font_body_bold_italic | font_face }}
+
   :root {
     --color-heading-text: {{ settings.color_heading_text }};
     --color-body-text: {{ settings.color_body_text }};
@@ -18,7 +22,6 @@
     --color-button-text: {{ settings.color_button_text_primary }};
     --color-button-alt: {{ settings.color_button_alt }};
     --color-button-text-alt: {{ settings.color_button_text_alt }};
-    --font-button-weight: {{ settings.button_weight }};
 
 
     --color-text-field-text: {{ settings.color_text_field_text }};
@@ -41,11 +44,13 @@
     --font-body-size: {{ settings.body_font_size }}px;
     --font-footer-size: {{ settings.footer_font_size }}px;
     --font-link-size: {{ settings.link_font_size }}px;
+
+    --font-hero: {{ settings.hero_font.family }}, {{ settings.hero_font.fallback_families }};
+    --font-hero-weight: {{ settings.hero_font.weight }};
+    --font-hero-size: {{ settings.hero_font_size }}px;
+
+    --font-button: {{ settings.button_font.family }}, {{ settings.button_font.fallback_families }};
+    --font-button-weight: {{ settings.button_font.weight }};
+    --font-button-size: {{ settings.button_font_size }}px;
   }
 </style>
-
-
-{% render 'css-font' %}
-{% render 'css-background' %}
-{% render 'css-button' %}
-{% render 'css-icon' %}

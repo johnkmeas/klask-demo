@@ -14534,8 +14534,36 @@ video {
 .kl-font-header-nav-weight {
   font-weight: var(--font-heading-weight); }
 
+/* hero */
+.kl-font-hero-size {
+  font-size: 48px;
+  /* Medium (md) */
+  /* Large (lg) */
+  /* Extra Large (xl) */ }
+  @media (min-width: 640px) {
+    .kl-font-hero-size {
+      font-size: 80px; } }
+  @media (min-width: 768px) {
+    .kl-font-hero-size {
+      font-size: 90px; } }
+  @media (min-width: 1024px) {
+    .kl-font-hero-size {
+      font-size: 100px; } }
+  @media (min-width: 1280px) {
+    .kl-font-hero-size {
+      font-size: var(--font-hero-size); } }
+
+.kl-font-hero-weight {
+  font-weight: var(--font-hero-weight); }
+  @media (max-width: 640px) {
+    .kl-font-hero-weight {
+      font-weight: var(--font-heading-weight); } }
+
+.kl-font-hero-line-height {
+  line-height: 3.4rem; }
+
 .kl-font-shout-out-size {
-  font-size: 108px; }
+  font-size: var(--font-hero-size); }
 
 .kl-font-shout-line-height {
   line-height: 1em; }
@@ -14559,9 +14587,6 @@ video {
 
 .kl-h4 {
   font-size: var(--font-heading-h4-size); }
-
-.hk-font-hero-size {
-  font-size: 108px; }
 
 .k1-font-header-product-size {
   font-size: var(--font-heading-h2-size); }
@@ -14608,7 +14633,7 @@ video {
       font-size: 95px; } }
   @media (min-width: 1280px) {
     .kl-font-fluid-size {
-      font-size: 108px; } }
+      font-size: var(--font-hero-size); } }
 
 .kl-font-fluid-weight {
   font-weight: var(--font-body-weight); }
@@ -14733,6 +14758,27 @@ video {
   .kl-thumbnail-video::before {
     width: 246px;
     height: 246px; } }
+
+.kl-color-field {
+  color: var(--color-text-field-text); }
+
+.kl-border-color-field {
+  color: var(--color-text-field-border); }
+
+.kl-bg-button {
+  background-color: var(--color-button); }
+
+.kl-bg-button-alt {
+  background-color: var(--color-button-alt); }
+
+.kl-color-button {
+  color: var(--color-button-text); }
+
+.kl-color-button-alt {
+  color: var(--color-button-text-alt); }
+
+.kl-font-button-weight {
+  font-weight: var(--font-button-weight); }
 
 .kl-button-height {
   height: 64px; }
