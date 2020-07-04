@@ -14469,6 +14469,23 @@ video {
 .kl-rotate-svg-180 svg {
   transform: rotate(180deg); }
 
+.container.kl-nav-container {
+  /* Medium (md) */
+  /* Large (lg) */
+  /* Extra Large (xl) */ }
+  @media (min-width: 640px) {
+    .container.kl-nav-container {
+      max-width: 720px; } }
+  @media (min-width: 768px) {
+    .container.kl-nav-container {
+      max-width: 864px; } }
+  @media (min-width: 1024px) {
+    .container.kl-nav-container {
+      max-width: 1152px; } }
+  @media (min-width: 1280px) {
+    .container.kl-nav-container {
+      max-width: 1440px; } }
+
 /* 
     --color-heading-text: #0a00a3;
     --color-body-text: #333232;

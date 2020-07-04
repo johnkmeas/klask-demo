@@ -1,13 +1,18 @@
 <header>
   <!-- Topper -->
   <div class="kl-bg-blue">
-    <div class="container px-4 md:px-0 sm:mx-auto">
-      <div class="h-10 flex flex-row flex-wrap justify-center content-center items-center">
+    <div class="container px-4 md:px-0 sm:mx-auto relative">
+      <div class="h-8 flex flex-row flex-wrap justify-center content-center items-center">
         <span class="kl-font-header kl-color-yellow inline-block align-middle font-black kl-topper-letter-spacing">
           FREE SHIPPING ON ALL ORDERS
         </span>
-        <div class="hidden sm:block flex flex-row justify-end">
-          <span class="kl-font-footer-size kl-font-body bold  kl-color-light" >United States</span>
+        <div class="hidden sm:block flex flex-row justify-end absolute right-0">
+          <span class="kl-font-footer-size kl-font-body font-medium kl-color-light cursor-pointer">
+            United States
+            <span class="inline-block">
+              {% render 'icon-arrow-down-svg' %}
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -27,7 +32,7 @@
     </div>
   </div>
   <!-- Desktop navbar  nav -->
-  <nav class="kl-main-nav js-nav container z-50 px-4 sm:px-0 sm:mx-auto fixed sm:relative kl-bg-white top-0">
+  <nav class="kl-main-nav js-nav container kl-nav-container z-50 px-4 sm:px-0 sm:mx-auto fixed sm:relative kl-bg-white top-0">
     <div class=" hidden sm:block flex flex-col justify-between h-screen py-24 sm:py-0 sm:h-20">
       <ul class="grid grid-cols-7 h-full px-12 sm:px-0">
         {% for link in linklists.main-menu.links %}
