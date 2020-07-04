@@ -11,7 +11,7 @@
 {% endif %}
 
 <div {{data}} class="js-product kl-border-product kl-card-rounded sm:p-8 md:p-12 flex flex-col justify-between" style="display: {{ display }};">
-  <h3 class="hidden sm:block kl-font-header k1-font-header-product-size kl-color-body text-center">{{ all_products[ product].title }}</h3>
+  <h3 class="hidden sm:block kl-font-header k1-font-header-product-size kl-color-body text-center font-bold">{{ all_products[ product].title }}</h3>
   <div>
     <div class="px-12 sm:px-0">
       {% render 'text-paragraph' with size: 'product', align: 'center', text: text %}
