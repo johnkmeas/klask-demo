@@ -123,6 +123,10 @@
       transform: translateX(0);
       transition: transform 300ms ease-in-out;
     }
+
+    .kl-nav-active-body-lock {
+      overflow: hidden;
+    }
   }
 
   .kl-topper-letter-spacing {
@@ -180,10 +184,13 @@
   document.querySelector('.js-close-mobile-nav').addEventListener('click', function() {
     document.querySelector('.js-nav').classList.add("kl-hidden-nav");
     document.querySelector('.js-nav').classList.remove("kl-block-nav");
+    document.body.classList.remove('kl-nav-active-body-lock');
+    console.log('boyd',document.body.classList);
   })
 
   document.querySelector('.js-open-mobile-nav').addEventListener('click', function() {
     document.querySelector('.js-nav').classList.add("kl-block-nav");
     document.querySelector('.js-nav').classList.remove("kl-hidden-nav");
+    document.body.classList.add('kl-nav-active-body-lock');
   })
 </script>
