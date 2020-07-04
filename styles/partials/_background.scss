@@ -8,6 +8,14 @@
   background-color: var(--color-body-bg-alt);
 }
 
+.kl-bg-review {
+  background-color: #F3F3F6;
+
+  @media (min-width: 640px) {
+    background-color: var(--color-body-bg-alt);
+  }
+}
+
 .kl-bg-blue,
 .kl-bg-dark {
   background-color: var(--color-body-bg-dark);

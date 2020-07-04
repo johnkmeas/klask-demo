@@ -8,10 +8,12 @@
 {% elsif size == 'large' %}
   {% assign text_size = 'kl-font-body-large-size' %}
 {% elsif size == 'review' %}
-  {% assign text_size = 'kl-font-body-review-size' %}
+  {% assign text_size = 'kl-font-body-review-size kl-font-header-weight' %}
 {% elsif size == 'tutorial' %}
   {% assign text_size = 'kl-h4' %}
 {% endif %} 
+
+
 
 {% comment %} Text Align {% endcomment %}
 {% if align == 'center' %}
