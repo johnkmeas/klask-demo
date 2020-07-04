@@ -14819,9 +14819,9 @@ video {
 .kl-button-border-side:hover, .kl-button-border-side.active {
   background-color: var(--color-topper-text); }
 
-.slick-slide {
-  margin: 0 5px; }
+/*
 
+*/
 button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
   display: none !important; }
 
@@ -14836,6 +14836,13 @@ button.slick-arrow.slick-next, button.slick-arrow.slick-prev {
 .slick-review-nav .slick-track {
   display: flex;
   align-items: center; }
+
+.slick-testimony .slick-slide {
+  margin: 0 10px; }
+
+@media (min-width: 640px) {
+  .slick-awards .slick-slide {
+    margin: 0 10px; } }
 
 /*
 .kl-club-slick {

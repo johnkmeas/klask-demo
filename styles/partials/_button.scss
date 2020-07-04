@@ -77,9 +77,9 @@
 }
 
 // SLICK SLIDE
-.slick-slide {
-  margin: 0 5px;
-}
+/*
+
+*/
 button.slick-arrow {
   &.slick-next,
   &.slick-prev {
@@ -104,6 +104,20 @@ button.slick-arrow {
   .slick-track {
     display: flex;
     align-items: center;
+  }
+}
+
+.slick-testimony {
+  .slick-slide {
+    margin: 0 10px;
+  }
+}
+
+.slick-awards {
+  .slick-slide {
+    @media (min-width: 640px) {
+      margin: 0 10px;
+    }
   }
 }
 /*

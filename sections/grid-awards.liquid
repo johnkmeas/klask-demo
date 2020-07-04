@@ -1,21 +1,19 @@
 <section class="kl-bg-off-white py-10 pb-16 sm:py-20">
   <!-- desktop -->
   <div class="container px-5 sm:mx-auto">
-    <div class="flex flex-col sm:flex-row justify-between pb-8 sm:pb-10">
-      <h3 class="kl-h2 kl-font-header kl-font-header-weight kl-color-heading">
-        <span class="block text-center sm:text-left">
-          {{ section.settings.heading }}
-        </span>
-      </h3>
-    </div>
-
+    <h3 class="kl-h2 kl-font-header kl-font-header-weight kl-color-heading">
+      <span class="block text-center sm:text-left pb-8 sm:pb-10">
+        {{ section.settings.heading }}
+      </span>
+    </h3>
+  </div>
     {% if section.settings.desktop_slider %}
       {% assign desktop_slide_class = '' %}
     {% else %}
       {% assign desktop_slide_class = 'sm:hidden' %}
     {% endif %}
 
-    <ul class="block {{ desktop_slide_class }} slick-awards">
+    <ul class="block px-5 sm:px-0 {{ desktop_slide_class }} slick-awards">
       {% for block in section.blocks %}
         <li class="">
           <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="script">
@@ -24,15 +22,17 @@
     </ul>
 
     {% if section.settings.desktop_slider == false %}
-      <ul class="hidden sm:grid sm:grid-cols-4 sm:col-gap-5 sm:row-gap-3 lg:col-gap-12 lg:row-gap-6">
-        {% for block in section.blocks %}
-          <li class="">
-            <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="script">
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="hidden sm:block container px-5 sm:mx-auto">
+        <ul class="sm:grid sm:grid-cols-4 sm:col-gap-5 sm:row-gap-3 lg:col-gap-12 lg:row-gap-6">
+          {% for block in section.blocks %}
+            <li class="">
+              <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="script">
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     {% endif %}
-  </div>
+  
 </section>
 
 {% schema %}
