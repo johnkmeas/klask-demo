@@ -1,16 +1,16 @@
 {% comment %} Font Size {% endcomment %}
 {% if size == 'body' %}
-  {% assign text_size = 'kl-font-body-size' %}
+  {% assign text_size = 'kl-font-body-size kl-font-body-weight' %}
 {% elsif size == 'medium' %}
   {% assign text_size = 'kl-font-body-medium-size' %}
 {% elsif size == 'product' %}
-  {% assign text_size = 'kl-font-body-product-size' %}
+  {% assign text_size = 'kl-font-body-product-size kl-font-header-weight' %}
 {% elsif size == 'large' %}
-  {% assign text_size = 'kl-font-body-large-size' %}
+  {% assign text_size = 'kl-font-body-large-size kl-font-header-weight' %}
 {% elsif size == 'review' %}
   {% assign text_size = 'kl-font-body-review-size kl-font-header-weight' %}
 {% elsif size == 'tutorial' %}
-  {% assign text_size = 'kl-h4' %}
+  {% assign text_size = 'kl-h4 kl-font-body-weight' %}
 {% endif %} 
 
 
