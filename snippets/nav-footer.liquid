@@ -3,10 +3,10 @@
     <div class="container px-5 sm:mx-auto ">
 
 
-      <div class="hidden sm:grid sm:grid-cols-2 sm:grid-cols-12 sm:gap-10 sm:gap-24">
-        <div class="col-span-10 col-start-2 flex flex-row justify-between">
+      <div class="hidden sm:grid sm:grid-cols-2 sm:grid-cols-12 sm:px-0 lg:px-20 xl:px-32">
+        <!-- <div class="col-span-12 lg:col-span-10 sm:col-start-0 lg:col-start-2 flex flex-row justify-between"> -->
           {% for link in linklists.footer.links %}
-            <ul class="kl-nav-link-line-height">
+            <ul class="kl-nav-link-line-height col-span-3">
               <!-- {{ link.title }}: child_active: {{ link.child_active }} -->
               <li class="pb-2">
                 <a href="{{ link.url }}" class="kl-font-header kl-font-link-size kl-font-header-nav-weight kl-color-header-nav">{{ link.title }}</a>
@@ -19,7 +19,7 @@
               {% endfor %}
             </ul>
           {% endfor %}
-        </div>
+        <!-- </div> -->
       </div>
 
       <!-- mobile -->
