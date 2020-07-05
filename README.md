@@ -17,12 +17,12 @@ This project demonstrates my ability to convert a design file into a frontend te
 * [Tailwind CSS](https://tailwindcss.com/)
 * Themekit
 
-note: All javascript libraries were loaded by CDN, I would not do this in production.
+note: All javascript libraries were loaded by CDN, I would not do it this way in production.
 
 #### Small Issues
 
-I noticed a few elements in this illustration were not showing up. No problem, I was able to take care of it. From my experience in screen printing, this happens a lot when transferring files for some reason. It's escpecially easy to miss when dealing with organic line illustrations.
-![alt text](./images/icon-output-issue.png)
+A few elements in this illustration seemed to disappear in the blue background so I took care of it assuming it was supposed to be white.
+![alt text](./images/icon-output-issue@2x.jpg)
 
-One other issue I noticed is that this large text area had gotten clipped in the design file, again most likely caused by software. I used my common sense and corrected it.
+This large text was getting clipped in the design file, most likely a software issue. I took care of it.
 ![alt text](./images/shout-out-clipped.jpeg)
