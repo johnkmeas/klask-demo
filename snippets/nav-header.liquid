@@ -55,14 +55,14 @@
           {% endif %}
 
           <li class="relative flex flex-col justify-center {{ has_sublink }} items-center">
-            <a href="{{ link.url }}" class="kl-nav-item {{ link_active }} block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav relative py-5">{{ link.title }}</a>
+            <a href="{{ link.url }}" class="kl-nav-item {{ link_active }} block kl-font-header kl-font-link-size kl-font-header-mobile-link-size kl-font-header-nav-weight kl-color-header-nav relative py-5 block">{{ link.title }}</a>
             {% if link.links != blank %}
               <div class="absolute kl-nav-sublink kl-nav-sublink-mt kl-bg-white top-0 kl-shadow kl-card-rounded">
                 <div class="flex justify-center kl-top-triangle"></div>
                 <ul class="p-6">
                   {% for sub_link in link.links %}
                     <li>
-                      <a href="{{ sub_link.url }}" class="kl-font-header kl-font-body-subnav-size kl-font-body-weight kl-color-heading">{{ sub_link.title }}</a>
+                      <a href="{{ sub_link.url }}" class="kl-font-header kl-font-body-subnav-size kl-font-body-weight kl-color-heading block">{{ sub_link.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>

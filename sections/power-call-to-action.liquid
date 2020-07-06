@@ -41,58 +41,56 @@
 
 </section>
 <style>
-.kl-play-arrow-blue {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  position: absolute;
-}
+  .kl-play-arrow-blue {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+  }
 
-.kl-play-arrow-blue:after {
-  content: "";
-  background: url({{ 'icon-play-blue.svg' | asset_url }}) no-repeat;
-  background-size: contain !important;
-  display: inline-block;
-  width: calc(103px + (137 - 103) * ((100vw - 370px) / (1600 - 370)));
-  height: calc(97px + (129 - 97) * ((100vw - 370px) / (1600 - 370)));
-  position: absolute;
-}
+  .kl-play-arrow-blue:after {
+    background: url({{ 'icon-play-blue.svg' | asset_url }}) no-repeat;
+    background-size: contain !important;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 97px;
+    position: absolute;
+    width: 103px;
+  }
 
-.kl-play-arrow-blue-mobile:after {
-  content: "";
-  background: url({{ 'icon-play-blue-mobile.svg' | asset_url }}) no-repeat;
-  background-size: contain !important;
-  display: inline-block;
-  height: 60px;
-  width: 40px;
-  position: absolute;
-}
+  @media (min-width: 640px) {
+    .kl-play-arrow-blue:after {
+      height: 129px;
+      width: 137px;
+    }
+  }
 
-.kl-icon-arrow-dashed:after {
-  content: "";
-  background: url({{ 'icon-arrow-dashed.svg' | asset_url }}) no-repeat;
-  background-size: contain !important;
-  content: "";
-  display: inline-block;
-  height: 170px;
-  width: 173px;
-  position: absolute;
-  z-index: 1;
-}
+  .kl-icon-arrow-dashed:after {
+    background: url({{ 'icon-arrow-dashed.svg' | asset_url }}) no-repeat;
+    background-size: contain !important;
+    content: "";
+    display: inline-block;
+    height: 170px;
+    position: absolute;
+    width: 173px;
+    z-index: 1;
+  }
 
-.kl-icon-arrow-dashed-mobile:after {
-  content: "";
-  background: url({{ 'icon-arrow-dashed-mobile.svg' | asset_url }}) no-repeat;
-  background-size: contain !important;
-  display: inline-block;
-  height: 64px;
-  width: 65px;
-  position: absolute;
-}
+  .kl-icon-arrow-dashed-mobile:after {
+    background: url({{ 'icon-arrow-dashed-mobile.svg' | asset_url }}) no-repeat;
+    background-size: contain !important;
+    content: "";
+    display: inline-block;
+    height: 64px;
+    position: absolute;
+    width: 65px;
+  }
 
 </style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function(event) {
   $(document).ready(function() {
