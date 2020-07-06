@@ -2,7 +2,7 @@
   <div class="container px-5 sm:mx-auto">
     {% render 'text-heading' with h_type: 'h2', text: section.settings.heading, icon: section.settings.heading_decoration %}
     <!-- Mobile -->
-    <ul class="block sm:hidden grid grid-cols-2 gap-4">
+    <ul class="block sm:hidden grid grid-cols-2 gap-3">
       {% for block in section.blocks %}
         <li class="">
           <img src="{{ block.settings.club_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.club_thumbnail.alt }}" class="script">
