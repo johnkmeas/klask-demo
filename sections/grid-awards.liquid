@@ -13,10 +13,19 @@
       {% assign desktop_slide_class = 'sm:hidden' %}
     {% endif %}
 
+    {% if section.settings.border_desktop %}
+      {% assign border_desktop = 'kl-award-border-desktop' %}
+    {% endif %}
+
+    {% if section.settings.border_mobile %}
+      {% assign border_mobile =  'kl-award-border-mobile' %}
+    {% endif %}
+
+
     <ul class="block px-5 sm:px-0 {{ desktop_slide_class }} slick-awards">
       {% for block in section.blocks %}
         <li class="">
-          <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="script">
+          <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="{{ border_desktop }} {{ border_mobile }}">
         </li>
       {% endfor %}
     </ul>
@@ -26,7 +35,7 @@
         <ul class="sm:grid sm:grid-cols-4 sm:col-gap-5 sm:row-gap-3 lg:col-gap-12 lg:row-gap-6">
           {% for block in section.blocks %}
             <li class="">
-              <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="script">
+              <img src="{{ block.settings.award_thumbnail.src | img_url: 'x300' }}" alt="{{ block.settings.award_thumbnail.alt }}" class="{{ border_desktop }}">
             </li>
           {% endfor %}
         </ul>
@@ -52,6 +61,22 @@
         "type": "checkbox",
         "id": "desktop_slider",
         "label": "Slider for Desktop"
+      },
+      {
+        "type": "checkbox",
+        "id": "border_desktop",
+        "label": "Border for Desktop"
+      },
+      {
+        "type": "checkbox",
+        "id": "border_mobile",
+        "label": "Border for Mobile"
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border Color",
+        "default": "#d7d5f1"
       }
     ],
     "blocks": [
@@ -75,6 +100,23 @@
     ]
   }
 {% endschema %}
+
+<style>
+  @media (max-width: 639px) {
+    .kl-award-border-mobile {
+      border: 2px solid {{ section.settings.border_color }};
+      border-radius: 10px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .kl-award-border-desktop {
+      border: 2px solid {{ section.settings.border_color }};
+      border-radius: 10px;
+    }
+  }
+
+</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function(event) {

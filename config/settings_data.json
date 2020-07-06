@@ -235,49 +235,49 @@
           "1593552210008": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/Arets_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/Arets-Copy_2x-min.jpeg"
             }
           },
           "1593552602522": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/Bettspilluguiden_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/Bettspilluguiden-Copy_2x-min.jpeg"
             }
           },
           "1593552634770": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/Gulbrikken_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/Gulbrikken-Copy_2x-min.jpeg"
             }
           },
           "1593552665152": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/Spiel_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/Spiel-Copy_2x-min.jpeg"
             }
           },
           "1593552685913": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/The-Dice_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/The-Dice-Copy_2x-min.jpeg"
             }
           },
           "1593552704783": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/Toty_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/Toty-Copy_2x-min.jpeg"
             }
           },
           "1593552716978": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/Vuoden_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/Vuoden-Copy_2x-min.jpeg"
             }
           },
           "1593552650277": {
             "type": "select",
             "settings": {
-              "award_thumbnail": "shopify:\/\/shop_images\/More-Awards-Comming_2x-min.png"
+              "award_thumbnail": "shopify:\/\/shop_images\/More-Awards-Comming-Copy_2x-min.jpeg"
             }
           }
         },
@@ -293,7 +293,10 @@
         ],
         "settings": {
           "heading": "Klask Awards",
-          "desktop_slider": false
+          "desktop_slider": false,
+          "border_desktop": true,
+          "border_mobile": false,
+          "border_color": "#d7d5f1"
         }
       },
       "1593555415754": {
