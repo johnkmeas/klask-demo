@@ -12,16 +12,19 @@
           <div>
             {% render 'text-paragraph' with size: 'tutorial', text: section.settings.content, custom_class: 'kl-color-body-blue leading-loose' %}
           </div>
-
-          <a class="kl-h4 kl-font-body kl-color-heading kl-font-header-weight underline" href="section.settings.cta_1_url">
-            {{ section.settings.cta_1_text }}
-          </a>
+          <span>
+            <a class="kl-h4 kl-font-body kl-color-heading kl-font-header-weight underline inline-block" href="section.settings.cta_1_url">
+              {{ section.settings.cta_1_text }}
+            </a>
+          </span>
           <span class="py-6">
             {% render 'icon-line-dashed-svg' %}
           </span>
-          <a class="kl-mix-font kl-font-body kl-color-heading underline" href="section.settings.cta_2_url">
-            {{ section.settings.cta_2_text }}
-          </a>
+          <span>
+            <a class="kl-mix-font kl-font-body kl-color-heading underline inline-block" href="section.settings.cta_2_url">
+              {{ section.settings.cta_2_text }}
+            </a>            
+          </span>
 
         </div>
       </div>
